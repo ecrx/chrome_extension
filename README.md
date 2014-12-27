@@ -11,10 +11,11 @@ ECR Retail Application Development Hachathon
 5 - Test Enviroment & Development: 
 
 The Version of the chromium browser needs to be a newer version than 37.0.2062.94 than you are using on your development environment.
-The application developers needs to package their applications as a chromium extension. This document explains details of the chromium extensions and it’s also possible to go to chromium’s https://developer.chrome.com/extensions/getstarted web site to get more information relevant to extension development.
+The application developers needs to package their applications as a chromium extension. This document explains details of the chromium extensions and it’s also possible to go to chromium’s : https://developer.chrome.com/extensions/getstarted web site to get more information relevant to extension development.
 
 6 - Sample Chrome Extension Manifest: 
 
+```javascript 
 {
    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://widget.uservoice.com/; object-src 'self'",
    "description": "Flappy Bird",
@@ -30,6 +31,7 @@ The application developers needs to package their applications as a chromium ext
    "version": "2.8.0",
    "web_accessible_resources": [ "index.html", "flappy-bird-logo.jpeg" ]
 }
+```
 
 
 
