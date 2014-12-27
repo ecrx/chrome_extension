@@ -1,4 +1,4 @@
-ECR Retail Application Development Hachathon
+ECR Retail Application Development Hackhathon
 ================
 1. Getting Started: Building a Chrome Extension : https://developer.chrome.com/extensions/getstarted
 
