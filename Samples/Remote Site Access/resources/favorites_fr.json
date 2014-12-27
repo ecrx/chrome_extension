@@ -1,0 +1,18 @@
+[
+	{"title":"Facebook","url":"http://www.facebook.com/","img":"int/www.facebook.com.gif","bgColor":"#3A5896"},
+	{"type":"google","title":"Youtube","url":"http://www.youtube.com","img":"int/www.youtube.com.png"},
+	{"title":"Amazon","url":"http://www.amazon.fr/","img":"fr/www.amazon.fr.png"},
+	{"title":"eBay","url":"http://www.ebay.fr/","img":"int/www.ebay.com.png"},
+	{"type":"google","title":"Outlook","url":"http://maps.google.com","img":"int/googlemaps.png"},
+		
+	{"title":"L'Equipe","url":"http://www.lequipe.fr/","img":"fr/www.lequipe.fr.png"},
+	{"title":"Le Monde.","url":"http://www.lemonde.fr/","img":"fr/www.lemonde.fr.png"},
+		
+	{"type":"google","title":"Gmail","url":"http://mail.google.com","img":"int/www.gmail.com.png"},
+	{"title":"Outlook","url":"http://www.outlook.com","img":"int/www.outlook.com.png"},
+	
+	{"title":"Twitter","url":"http://www.twitter.com/","img":"int/www.twitter.com.png"},
+	{"title":"Dailymotion","url":"http://www.dailymotion.com","img":"int/www.dailymotion.com.png"},
+	{"title":"Leboncoin","url":"http://www.leboncoin.fr","img":"fr/www.leboncoin.fr.png"},
+	{"title":"Programme TV","url":"http://www.programme-tv.net","img":"fr/www.programme-tv.net.gif"}
+]

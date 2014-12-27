@@ -1,0 +1,64 @@
+{
+   "apps": {
+      "message": "Apps"
+   },
+   "dont_show_on_this_page": {
+      "message": "Ne pas afficher sur cette page"
+   },
+   "favorites": {
+      "message": "Favorites"
+   },
+   "most_visited": {
+      "message": "Les + visit\u00E9s"
+   },
+   "newtab": {
+      "message": "Nouvel onglet"
+   },
+   "open_as_full_screen": {
+      "message": "Ouvrir en mode plein \u00E9cran"
+   },
+   "open_as_pinned_tab": {
+      "message": "Ouvrir dans un onglet \u00E9pingl\u00E9"
+   },
+   "open_as_regular_tab": {
+      "message": "Ouvrir dans un onglet standard"
+   },
+   "open_as_window": {
+      "message": "Ouvrir dans une fen\u00EAtre"
+   },
+   "opened_tabs": {
+      "message": "Opened tabs"
+   },
+   "options": {
+      "message": "Options"
+   },
+   "recently_closed": {
+      "message": "R\u00E9cemment ferm\u00E9s"
+   },
+   "remove_app": {
+      "message": "D\u00E9sinstaller \"$app$\"?",
+      "placeholders": {
+         "app": {
+            "content": "$1"
+         }
+      }
+   },
+   "remove_from_chrome": {
+      "message": "Supprimer de Google Chrome"
+   },
+   "restore_all": {
+      "message": "Tout restaurer"
+   },
+   "search": {
+      "message": "Recherche"
+   },
+   "thumbnail_removed": {
+      "message": "Miniature supprim\u00E9e"
+   },
+   "undo": {
+      "message": "Annuler"
+   },
+   "web": {
+      "message": "Internet"
+   }
+}

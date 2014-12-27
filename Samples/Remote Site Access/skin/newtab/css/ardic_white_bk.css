@@ -1,0 +1,41 @@
+/* Colors Default */
+body {
+	background-color: #afafaf; /* layer fill content */
+ 	background-image: -webkit-linear-gradient(bottom, #dfdfdf 0%, #9f9f9f 100%); /* gradient overlay */
+	
+}
+a.active {
+    color:#333 }
+	
+a.passive {
+    color:#999; }
+	
+.navbar {
+	background-color: #cbcbcb; /* layer fill content */
+	background-image: -webkit-linear-gradient(bottom, #aeaeae 0%, #f3f3f3 100%); /* gradient overlay */
+}
+.navbar-inverse .navbar-nav > li > a { 
+	color:#888888;
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .active > a,.navbar-inverse .navbar-nav > .active > a:hover,.navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #bdbdbd; /* layer fill content */
+	background-image: -webkit-linear-gradient(bottom, #c7c7c7 0%, #e8e8e8 100%); /* gradient overlay */
+	color:#333;
+}
+.navbar-nav.NavIcons > li > a .active {
+    color:#333 }
+.navbar-nav.NavIcons > li > a .passive {
+    color:#999; }
+	
+.carousel-inner .thumbnail {
+background-color:#FFF;
+}
+
+.carousel-indicators li { background-color: none; /* layer fill content */ }
+.carousel-indicators .active {
+background-color:#B3B3B3; /* layer fill content */
+}
+
+
+#footer { background-color: #a7a7a7; /* layer fill content */ background-image: -webkit-linear-gradient(bottom, #9f9f9f 0%, #dfdfdf 100%); /* gradient overlay */}
+#footer .marquee { color:#999; overflow: hidden;}

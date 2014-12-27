@@ -1,0 +1,73 @@
+{
+   "add": {
+      "message": "Add"
+   },
+   "apps": {
+      "message": "Apps"
+   },
+   "dont_show_on_this_page": {
+      "message": "Don't show on this page"
+   },
+   "favorites": {
+      "message": "Favorites"
+   },
+   "most_visited": {
+      "message": "Most Visited"
+   },
+   "mv_page_li_width": {
+      "message": "91px"
+   },
+   "newtab": {
+      "message": "New Tab"
+   },
+   "open_as_full_screen": {
+      "message": "Open as full screen"
+   },
+   "open_as_pinned_tab": {
+      "message": "Open as pinned tab"
+   },
+   "open_as_regular_tab": {
+      "message": "Open as regular tab"
+   },
+   "open_as_window": {
+      "message": "Open as window"
+   },
+   "opened_tabs": {
+      "message": "Opened tabs"
+   },
+   "options": {
+      "message": "Options"
+   },
+   "read_it_later": {
+      "message": "Read it later"
+   },
+   "recently_closed": {
+      "message": "Recently closed"
+   },
+   "remove_app": {
+      "message": "Remove \"$app$\"?",
+      "placeholders": {
+         "app": {
+            "content": "$1"
+         }
+      }
+   },
+   "remove_from_chrome": {
+      "message": "Remove from Chrome"
+   },
+   "restore_all": {
+      "message": "Restore all"
+   },
+   "search": {
+      "message": "Search"
+   },
+   "thumbnail_removed": {
+      "message": "Thumbnail removed"
+   },
+   "undo": {
+      "message": "Undo"
+   },
+   "web": {
+      "message": "Web"
+   }
+}

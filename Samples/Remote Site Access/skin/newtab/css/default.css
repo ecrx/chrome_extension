@@ -1,0 +1,52 @@
+/* Colors Default */
+body {
+	/*background-color: #ededed !important;  layer fill content */
+	background-image: none;
+}
+a.active {
+    color:#333 }
+	
+a.passive {
+    color:#999; }
+	
+.navbar {
+	background-color: #ababab; /* layer fill content */
+	background-image: -webkit-linear-gradient(bottom, #959595 0%, #c5c5c5 100%); /* gradient overlay */
+	-webkit-box-shadow:0 0px 0px 0 rgba(0,0,1,0);
+	box-shadow:0 1px 7px 0 rgba(0,0,1,0);
+	border-bottom: 1px solid #000 !important; /* stroke */
+}
+.navbar-inverse .navbar-nav > li > a { 
+	color:#000;
+}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus 
+{ color:#333; }
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .active > a,.navbar-inverse .navbar-nav > .active > a:hover,.navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #507af1; /* layer fill content */
+	background-image: -webkit-linear-gradient(bottom, #295fed 0%, #6387f3 100%); /* gradient overlay */
+	color:#FFF;
+	-webkit-box-shadow:0 0px 0px 0 rgba(0,0,1,0);
+	box-shadow:0 1px 7px 0 rgba(0,0,1,0);
+}
+.navbar-nav.NavIcons > li > a .active {
+    color:#000; }
+.navbar-nav.NavIcons > li > a .passive {
+    color:#999; }
+	
+.carousel-inner .thumbnail {
+background-color: transparent !important;
+-moz-box-shadow: 0 0 16px rgba(0,0,1,0);
+-webkit-box-shadow: 0 0 16px rgba(0, 0, 1, 0);
+box-shadow: 0 0 16px rgba(0, 0, 1, 0);
+}
+.carousel-inner .thumbnail:hover {
+	background-color: rgba(255,255,255,.41);
+ }
+.carousel-indicators li { background-color: none; /* layer fill content */ }
+.carousel-indicators .active {
+background-color:#B3B3B3; /* layer fill content */
+}
+
+
+#footer { background-color: #a7a7a7; /* layer fill content */ background-image: -webkit-linear-gradient(bottom, #9f9f9f 0%, #dfdfdf 100%); /* gradient overlay */}
+#footer .marquee { color:#999; overflow: hidden; font-size:16pt; font-weight:bold;}

@@ -1,0 +1,19 @@
+{
+	"InstalledApp":	[{
+			"Name":	"Virtual Pos",
+			"Link":	"chrome-extension:///jdjnfmjdmaibffegfobdbchkpdeeccna/index.html",
+			"Icon":	"appicons/icon_ipos_128.png"
+		}, {
+			"Name":	"Restaurant App",
+			"Link":	"chrome-extension://deehfmpkpedocdpknjhjfpjjnccfeamp/index.html",
+			"Icon":	"appicons/icon_rest_128.png"
+		}, {
+			"Name":	"Rent Car",
+			"Link":	"http://www.hertz.com",
+			"Icon":	"appicons/icon_rentcar_128.png"
+		}, {
+			"Name":	"AppDummy",
+			"Link":	"javascript:void(0);",
+			"Icon":	"http://placehold.it/180x180"
+		}]
+}

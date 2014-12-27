@@ -1,0 +1,19 @@
+[
+	{"title":"Facebook","url":"http://www.facebook.com/","img":"int/www.facebook.com.gif","bgColor":"#3A5896"},
+	{"type":"google","title":"Youtube","url":"http://www.youtube.com","img":"int/www.youtube.com.png"},
+	{"title":"Amazon","url":"http://www.amazon.co.uk/","img":"uk/www.amazon.co.uk.png"},
+	{"title":"eBay","url":"http://www.ebay.co.uk/","img":"int/www.ebay.com.png"},
+	{"type":"google","title":"Outlook","url":"http://maps.google.com","img":"int/googlemaps.png"},
+	
+	{"title":"BBC","url":"http://www.bbc.co.uk/","img":"uk/www.bbc.co.uk.gif"},
+	{"title":"The Daily Mail","url":"http://www.dailymail.co.uk/","img":"uk/www.dailymail.co.uk.gif"},
+	{"title":"Telegraph","url":"http://www.telegraph.co.uk/","img":"uk/www.telegraph.co.uk.png"},
+	
+	{"type":"google","title":"Gmail","url":"http://mail.google.com","img":"int/www.gmail.com.png"},
+	{"title":"Outlook","url":"http://www.outlook.com","img":"int/www.outlook.com.png"},
+	{"title":"Twitter","url":"http://www.twitter.com/","img":"int/www.twitter.com.png"},
+	{"title":"Linkedin","url":"http://www.linkedin.com/","img":"int/www.linkedin.com.gif"},	
+	
+	{"title":"The Guardian","url":"http://www.guardian.co.uk/","img":"uk/www.guardian.co.uk.png"},	
+	{"title":"Tumblr","url":"http://www.tumblr.com","img":"int/www.tumblr.com.png"}
+]

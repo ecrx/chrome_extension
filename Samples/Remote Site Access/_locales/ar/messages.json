@@ -1,0 +1,67 @@
+{
+   "apps": {
+      "message": "Apps"
+   },
+   "chrome_web_store": {
+      "message": "\u0627\u0644\u0633\u0648\u0642 \u0627\u0644\u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A"
+   },
+   "dont_show_on_this_page": {
+      "message": "\u0639\u062F\u0645 \u0627\u0644\u0638\u0647\u0648\u0631 \u0641\u064A \u0647\u0630\u0647 \u0627\u0644\u0635\u0641\u062D\u0629"
+   },
+   "favorites": {
+      "message": "Favorites"
+   },
+   "most_visited": {
+      "message": "\u0627\u0644\u0623\u0643\u062B\u0631 \u0632\u064A\u0627\u0631\u0629"
+   },
+   "mv_page_li_width": {
+      "message": "120px"
+   },
+   "newtab": {
+      "message": "\u0639\u0644\u0627\u0645\u0629 \u062A\u0628\u0648\u064A\u0628 \u062C\u062F\u064A\u062F\u0629"
+   },
+   "open_as_full_screen": {
+      "message": "\u0641\u062A\u062D \u0641\u064A \u0648\u0636\u0639 \u0645\u0644\u0621 \u0627\u0644\u0634\u0627\u0634\u0629"
+   },
+   "open_as_pinned_tab": {
+      "message": "\u0641\u062A\u062D \u0643\u0639\u0644\u0627\u0645\u0629 \u062A\u0628\u0648\u064A\u0628 \u0645\u062B\u0628\u062A\u0629"
+   },
+   "open_as_regular_tab": {
+      "message": "\u0641\u062A\u062D \u0643\u0639\u0644\u0627\u0645\u0629 \u062A\u0628\u0648\u064A\u0628 \u0639\u0627\u062F\u064A\u0629"
+   },
+   "open_as_window": {
+      "message": "\u0641\u062A\u062D \u0643\u0646\u0627\u0641\u0630\u0629"
+   },
+   "opened_tabs": {
+      "message": "Opened tabs"
+   },
+   "options": {
+      "message": "\u062E\u064A\u0627\u0631\u0627\u062A"
+   },
+   "recently_closed": {
+      "message": "\u0627\u0644\u0645\u063A\u0644\u0642\u0629 \u062D\u062F\u064A\u062B\u064B\u0627"
+   },
+   "remove_app": {
+      "message": "\u0625\u0644\u063A\u0627\u0621 \"$app$\"?",
+      "placeholders": {
+         "app": {
+            "content": "$1"
+         }
+      }
+   },
+   "remove_from_chrome": {
+      "message": "\u0625\u0632\u0627\u0644\u0629 \u0645\u0646 Chrome"
+   },
+   "restore_all": {
+      "message": "\u0627\u0633\u062A\u0631\u062F\u0627\u062F \u0627\u0644\u0643\u0644"
+   },
+   "search": {
+      "message": "\u0628\u062D\u062B"
+   },
+   "thumbnail_removed": {
+      "message": "\u062A\u0645\u062A \u0625\u0632\u0627\u0644\u0629 \u0627\u0644\u0635\u0648\u0631\u0629 \u0627\u0644\u0645\u0635\u063A\u0651\u0631\u0629."
+   },
+   "undo": {
+      "message": "\u062A\u0631\u0627\u062C\u0639"
+   }
+}

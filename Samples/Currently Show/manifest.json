@@ -1,0 +1,17 @@
+{
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://widget.uservoice.com/; object-src 'self'",
+   "description": "Replace new tab screen with current time and weather.",
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "96": "images/icon96.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwwkf1AyjobSg0oMTB85DOnfRhAGflJ8oepz0SCC6fDv8DUXFUNgIeTKgCYN95HV71oSj4nohiQP7Q72FAm5o+GX0mwGWRbdCs3BeCUADt5RmRo5KPunGk6FIVOor6QgycTifmxM2QJ3MiWH9Qk2DwWFGwZJ0ywNF55+Ji0HiiVvV3urNN8jYHxyeSWOCMiRA/OOvFNdoELKWPi7hH4f6YE/5JQvdAbKGwqYSmNgJZvf3v0oRvYhPZ8z+cmNupxuBrxXDZ1SKwTectkxnWeNM/V1GWbV4CcqG4dFll33QQlEvzWg5PjlpHuNn42lTQ4aO4WNh07b/I6FufCCceWxkHwIDAQAB",
+   "manifest_version": 2,
+   "name": "currently show",
+   "options_page": "index.html#options",
+   "permissions": [ "storage", "geolocation", "unlimitedStorage", "https://maps.googleapis.com/maps/api/", "http://api.wunderground.com/api", "https://ssl.google-analytics.com/", "https://s3.amazonaws.com/" ],
+   "update_url": "http://localhost/updates.xml",
+   "version": "2.8.0",
+   "web_accessible_resources": [ "index.html", "images/icon128.png" ]
+}

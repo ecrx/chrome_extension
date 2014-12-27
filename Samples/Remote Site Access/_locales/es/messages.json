@@ -1,0 +1,172 @@
+{
+   "apps": {
+      "message": "Apps"
+   },
+   "dont_show_on_this_page": {
+      "message": "No mostrar en esta p\u00E1gina"
+   },
+   "favadd_add": {
+      "message": "Agregar"
+   },
+   "favadd_continue": {
+      "message": "Continuar"
+   },
+   "favadd_customurl": {
+      "message": "Ingresar nombre del sitio o URL"
+   },
+   "favadd_gallery": {
+      "message": "Galeria"
+   },
+   "favadd_go": {
+      "message": "Ir"
+   },
+   "favadd_save": {
+      "message": "Guardar"
+   },
+   "favadd_title": {
+      "message": "Agregar una placa"
+   },
+   "favadd_tooltip_imagefile": {
+      "message": "Subir imagen desde archivo"
+   },
+   "favadd_tooltip_screenshot": {
+      "message": "Tomar una captura"
+   },
+   "favadd_url": {
+      "message": "URL"
+   },
+   "favgrp_addgroup": {
+      "message": "Agregar"
+   },
+   "favgrp_create": {
+      "message": "Crear"
+   },
+   "favgrp_editgroup": {
+      "message": "Editar grupo"
+   },
+   "favgrp_groupname": {
+      "message": "Nombre del grupo"
+   },
+   "favgrp_pickcolor": {
+      "message": "Elige un color"
+   },
+   "favgrp_savegroup": {
+      "message": "Guardar"
+   },
+   "favorites": {
+      "message": "Favorites"
+   },
+   "gallery_title": {
+      "message": "\u05D1\u05D7\u05E8 \u05D0\u05EA\u05E8\u05D9\u05DD"
+   },
+   "layout_dialsmaxsize": {
+      "message": "Placa de m\u00E1ximo tama\u00F1o"
+   },
+   "layout_dialsmaxsize_large": {
+      "message": "Grande"
+   },
+   "layout_dialsmaxsize_medium": {
+      "message": "Mediano"
+   },
+   "layout_dialsmaxsize_small": {
+      "message": "Peque\u00F1o"
+   },
+   "layout_dialsshape": {
+      "message": "Forma"
+   },
+   "layout_dialsshape_box": {
+      "message": "Ancho"
+   },
+   "layout_dialsshape_flat": {
+      "message": "Angosto"
+   },
+   "layout_maxcolumns": {
+      "message": "Maximo n\u00FAmero de columnas"
+   },
+   "layout_showtitles": {
+      "message": "T\u00EDtulos"
+   },
+   "layout_spacing": {
+      "message": "Espaciado"
+   },
+   "layout_spacing_big": {
+      "message": "Grande"
+   },
+   "layout_spacing_medium": {
+      "message": "Mediano"
+   },
+   "layout_spacing_none": {
+      "message": "Ninguno"
+   },
+   "layout_spacing_small": {
+      "message": "Peque\u00F1o"
+   },
+   "layout_title": {
+      "message": "Dise\u00F1o"
+   },
+   "most_visited": {
+      "message": "M\u00E1s visitado"
+   },
+   "newtab": {
+      "message": "Nueva pesta\u00F1a"
+   },
+   "open_as_full_screen": {
+      "message": "Abrir en pantalla completa"
+   },
+   "open_as_pinned_tab": {
+      "message": "Abrir como pesta\u00F1a fija"
+   },
+   "open_as_regular_tab": {
+      "message": "Abrir como pesta\u00F1a normal"
+   },
+   "open_as_window": {
+      "message": "Abrir como ventana"
+   },
+   "opened_tabs": {
+      "message": "Opened tabs"
+   },
+   "options": {
+      "message": "Configuraci\u00F3n"
+   },
+   "recently_closed": {
+      "message": "Cerrado recientemente"
+   },
+   "remove_app": {
+      "message": "\u00BFQuieres eliminar \"$app$\"?",
+      "placeholders": {
+         "app": {
+            "content": "$1"
+         }
+      }
+   },
+   "remove_from_chrome": {
+      "message": "Eliminar de Chrome"
+   },
+   "restore_all": {
+      "message": "Restaurar todo"
+   },
+   "search": {
+      "message": "B\u00FAsqueda"
+   },
+   "theme_background": {
+      "message": "Fondo"
+   },
+   "theme_custombg": {
+      "message": "Fondo personalizado"
+   },
+   "theme_illumination": {
+      "message": "Iluminaci\u00F3n"
+   },
+   "theme_title": {
+      "message": "Tema"
+   },
+   "thumbnail_removed": {
+      "message": "Miniatura eliminada"
+   },
+   "undo": {
+      "message": "Deshacer"
+   },
+   "web": {
+      "message": "La Web"
+   }
+}

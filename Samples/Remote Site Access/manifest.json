@@ -1,0 +1,34 @@
+{
+   "background": {
+      "scripts": ["content/external/background.js"],
+      "persistent": false
+   },
+   "chrome_url_overrides": {
+      "newtab": "content/newtab.html"
+   },
+   "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["content/external/background.js"],
+	  "run_at": "document_end"
+    }
+  ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "default_locale": "en",
+   "description": "ARDIC ECR Launcher mockup",
+   "icons": {
+      "128": "resources/128.png",
+      "16": "resources/16.png",
+      "48": "resources/48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCcRiDQagH7E1RLt4h58Wv6etq1pvBHHnNqDIYGBCSBnCioL1ZyOHAco1IOucA6ZPsJvKLIQfs6G6ZLOKe4nF/JGa9pPj8eMHX68mzUSx7Uy6IGLahjQX4qczCyuZSSh8q57nhcW99eHFh23BXEXTCrL6Dz3gzlz5HrsdA6d7+f+QIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "23",
+   "name": "ARDIC ECR Launcher",
+   "permissions": [ "activeTab","experimental", "storage", "unlimitedStorage", "contextMenus", "webNavigation", "history", "bookmarks", "tabs", "management", "topSites", "chrome://favicon/", "http://*/*", "https://*/*", "file:///*" ],
+   "sandbox": {
+      "pages": [  ]
+   },
+   "version": "1.1.0",
+   "web_accessible_resources": [ "content/newtab.html" ]
+}

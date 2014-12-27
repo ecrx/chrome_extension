@@ -1,0 +1,67 @@
+{
+   "apps": {
+      "message": "Apps"
+   },
+   "dont_show_on_this_page": {
+      "message": "\u3053\u306E\u30DA\u30FC\u30B8\u306B\u8868\u793A\u3057\u306A\u3044"
+   },
+   "favorites": {
+      "message": "Favorites"
+   },
+   "most_visited": {
+      "message": "\u3088\u304F\u30A2\u30AF\u30BB\u30B9\u3059\u308B\u30DA\u30FC\u30B8"
+   },
+   "mv_page_li_width": {
+      "message": "130px"
+   },
+   "newtab": {
+      "message": "\u65B0\u3057\u3044\u30BF\u30D6"
+   },
+   "open_as_full_screen": {
+      "message": "\u5168\u753B\u9762\u8868\u793A"
+   },
+   "open_as_pinned_tab": {
+      "message": "\u56FA\u5B9A\u3055\u308C\u305F\u30BF\u30D6\u3068\u3057\u3066\u958B\u304F"
+   },
+   "open_as_regular_tab": {
+      "message": "\u901A\u5E38\u306E\u30BF\u30D6\u3068\u3057\u3066\u958B\u304F"
+   },
+   "open_as_window": {
+      "message": "\u30A6\u30A3\u30F3\u30C9\u30A6\u3068\u3057\u3066\u958B\u304F"
+   },
+   "opened_tabs": {
+      "message": "Opened tabs"
+   },
+   "options": {
+      "message": "\u30AA\u30D7\u30B7\u30E7\u30F3"
+   },
+   "recently_closed": {
+      "message": "\u6700\u8FD1\u9589\u3058\u305F\u30BF\u30D6"
+   },
+   "remove_app": {
+      "message": "\"$app$\" \u3055\u524A\u9664\u3092\u304C?",
+      "placeholders": {
+         "app": {
+            "content": "$1"
+         }
+      }
+   },
+   "remove_from_chrome": {
+      "message": "Chrome \u304B\u3089\u524A\u9664"
+   },
+   "restore_all": {
+      "message": "\u3059\u3079\u3066\u5FA9\u5143"
+   },
+   "search": {
+      "message": "\u691C\u7D22"
+   },
+   "thumbnail_removed": {
+      "message": "\u30B5\u30E0\u30CD\u30A4\u30EB\u3092\u524A\u9664\u3057\u307E\u3057\u305F\u3002"
+   },
+   "undo": {
+      "message": "\u53D6\u308A\u6D88\u3059"
+   },
+   "web": {
+      "message": "\u30A6\u30A7\u30D6"
+   }
+}

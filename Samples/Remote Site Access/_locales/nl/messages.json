@@ -1,0 +1,64 @@
+{
+   "apps": {
+      "message": "Apps"
+   },
+   "dont_show_on_this_page": {
+      "message": "Niet op deze pagina weergeven"
+   },
+   "favorites": {
+      "message": "Favorites"
+   },
+   "most_visited": {
+      "message": "Meest bezocht"
+   },
+   "newtab": {
+      "message": "Nieuw tabblad"
+   },
+   "open_as_full_screen": {
+      "message": "Openen in volledig scherm"
+   },
+   "open_as_pinned_tab": {
+      "message": "Openen als vastgezet tabblad"
+   },
+   "open_as_regular_tab": {
+      "message": "Openen als normaal tabblad"
+   },
+   "open_as_window": {
+      "message": "Openen als venster"
+   },
+   "opened_tabs": {
+      "message": "Opened tabs"
+   },
+   "options": {
+      "message": "Opties"
+   },
+   "recently_closed": {
+      "message": "Recent gesloten"
+   },
+   "remove_app": {
+      "message": "Wilt u \"$app$\" verwijderen?",
+      "placeholders": {
+         "app": {
+            "content": "$1"
+         }
+      }
+   },
+   "remove_from_chrome": {
+      "message": "Verwijderen uit Chrome"
+   },
+   "restore_all": {
+      "message": "Alles herstellen"
+   },
+   "search": {
+      "message": "Zoeken"
+   },
+   "thumbnail_removed": {
+      "message": "Miniatuur verwijderd."
+   },
+   "undo": {
+      "message": "Ongedaan maken"
+   },
+   "web": {
+      "message": "Het internet"
+   }
+}

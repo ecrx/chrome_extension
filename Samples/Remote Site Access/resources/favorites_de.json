@@ -1,0 +1,18 @@
+[
+	{"title":"Facebook","url":"http://www.facebook.com/","img":"int/www.facebook.com.gif","bgColor":"#3A5896"},
+	{"type":"google","title":"Youtube","url":"http://www.youtube.com","img":"int/www.youtube.com.png"},
+	{"title":"Amazon","url":"http://www.amazon.de/","img":"de/www.amazon.de.png"},
+	{"title":"eBay","url":"http://www.ebay.de/","img":"int/www.ebay.com.png"},
+	{"type":"google","title":"Outlook","url":"http://maps.google.com","img":"int/googlemaps.png"},	
+	
+	{"title":"Web.de","url":"http://web.de/","img":"de/web.de.png"},
+	{"title":"GMX","url":"http://www.gmx.com/","img":"de/www.gmx.com.png","bgColor":"#284083"},
+	{"title":"Bild.de","url":"http://www.bild.de/","img":"de/www.bild.de.jpg"},
+	{"title":"Spiegel Online","url":"http://www.spiegel.de/","img":"de/www.spiegel.de.png"},
+	
+	{"type":"google","title":"Gmail","url":"http://mail.google.com","img":"int/www.gmail.com.png"},
+	{"title":"Outlook","url":"http://www.outlook.com","img":"int/www.outlook.com.png"},
+	
+	{"title":"Tumblr","url":"http://www.tumblr.com/","img":"int/www.tumblr.com.png"},
+	{"title":"wetter","url":"http://www.wetter.de/","img":"de/www.wetter.com.png","bgColor":"#FDD04E"}	
+]

@@ -1,0 +1,64 @@
+{
+   "apps": {
+      "message": "Apps"
+   },
+   "dont_show_on_this_page": {
+      "message": "Non visualizzare in questa pagina"
+   },
+   "favorites": {
+      "message": "Favorites"
+   },
+   "most_visited": {
+      "message": "Pi\u00F9 visitati"
+   },
+   "newtab": {
+      "message": "Nuova scheda"
+   },
+   "open_as_full_screen": {
+      "message": "Apri a schermo intero"
+   },
+   "open_as_pinned_tab": {
+      "message": "Apri in una scheda bloccata"
+   },
+   "open_as_regular_tab": {
+      "message": "Apri in una scheda normale"
+   },
+   "open_as_window": {
+      "message": "Apri come finestra"
+   },
+   "opened_tabs": {
+      "message": "Opened tabs"
+   },
+   "options": {
+      "message": "Opzioni"
+   },
+   "recently_closed": {
+      "message": "Chiusi di recente"
+   },
+   "remove_app": {
+      "message": "Rimuovere \"$app$\"?",
+      "placeholders": {
+         "app": {
+            "content": "$1"
+         }
+      }
+   },
+   "remove_from_chrome": {
+      "message": "Rimuovi da Chrome"
+   },
+   "restore_all": {
+      "message": "Ripristina tutto"
+   },
+   "search": {
+      "message": "Ricerca"
+   },
+   "thumbnail_removed": {
+      "message": "Miniatura rimossa."
+   },
+   "undo": {
+      "message": "Annulla"
+   },
+   "web": {
+      "message": "Web"
+   }
+}

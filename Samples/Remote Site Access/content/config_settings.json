@@ -1,0 +1,10 @@
+{
+	"SettingsMenu":[
+			{"Name": "System Information", "Link": "cgi-bin/webif/info.sh?cat=Info"},	
+			{"Name": "USB Devices", "Link": "cgi-bin/webif/status-usb.sh"},	
+			{"Name": "Network Interfaces", "Link": "cgi-bin/webif/status-interfaces.sh"},	
+			{"Name": "Network Configuration", "Link": "cgi-bin/webif/network.sh"},	
+			{"Name": "Processes", "Link": "cgi-bin/webif/status-processes.sh"},
+			{"Name": "Diagnostics", "Link": "cgi-bin/webif/status-diag.sh"}
+	]
+}

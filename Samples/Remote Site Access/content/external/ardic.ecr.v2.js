@@ -1,0 +1,1006 @@
+var dmode = true; // Dev Mode On
+
+var ConError = false;
+var d = '';
+var dSetting = ''; //Dump Data Setting
+var dApp = ''; //Dump Data App
+var dMarket = ''; //Dump Data Market
+var dMarquee = ''; //Dump Data Marquee
+
+var Setup = false;
+
+var s = 'https://localhost/'; //Services URL
+var TimerTick = 5000; // Timer Tick
+var n = false; // Appname Visible or Not;
+var Timer4Json;
+var Timer4Wireless;
+var Timer4Bluetooth;
+var Timer4USB;
+
+(function($) {
+    $.fn.clickToggle = function(func1, func2) {
+        var funcs = [func1, func2];
+        this.data('toggleclicked', 0);
+        this.click(function() {
+            var data = $(this).data();
+            var tc = data.toggleclicked;
+            $.proxy(funcs[tc], this)();
+            data.toggleclicked = (tc + 1) % 2;
+        });
+        return this;
+    };
+}(jQuery));
+
+var utils = function() {
+    var a = chrome.app.getDetails(),
+        f = a.version,
+        c = a.id,
+        b = chrome.i18n.getMessage("@@ui_locale");
+    return {
+        getURL: function(a) {
+            return chrome.extension.getURL(a)
+        },
+        getPage: function(a) {
+            return this.getURL("/content/" + a + ".html")
+        },
+        getFileURL: function(a) {
+            return "chrome-extension://" + c + "/" + a
+        },
+        getFavIconURL: function(a) {
+            return "chrome://favicon/" + a
+        },
+        id: function() {
+            return c
+        },
+        version: function() {
+            return f
+        },
+        locale: function() {
+            return b
+        },
+        get: function(a) {
+            return localStorage[a]
+        },
+        set: function(a, d) {
+            localStorage[a] = d
+        },
+        isFirstRun: function() {
+            return void 0 == localStorage["general.firstRun"] || !localStorage["general.firstRun"] ? !0 : !1
+        },
+        isUpgradeRequired: function() {
+            return parseInt(localStorage["general.version"]) < parseInt(f) ? !0 : !1
+        },
+        loadTheme: function(a) {
+            $("head").append($("<link rel='stylesheet' type='text/css' href='" + a + "'>"));
+            if (dmode) console.log(a);
+        },
+        loadJS: function(a) {
+            $("head").append($("<script type='text/javascript' src='" + a + "'>"));
+        },
+        loadResource: function(a, f) {
+            try {
+                var c = new XMLHttpRequest;
+                c.open("GET", chrome.extension.getURL(a), !1);
+                this.hideLoader();
+                c.send();
+                return "xml" == f ? c.responseXML : "text" == f ? c.responseText : JSON.parse(c.responseText)
+            } catch (b) {
+                if (dmode) console.log(b)
+            }
+        },
+        showLoader: function() {
+            $('#loader .spinner').css('margin-left', '-125px');
+            $('#loader').show().addClass('in');
+        },
+        hideLoader: function() {
+            $('#loader').hide().removeClass('in');
+        },
+        ShowError: function(a, b) {
+            ConError = true;
+            var errorText = '';
+            if (a.status == 0) {
+                if (dmode) {
+                    errorText = "Connection Problem<br><br> " + a.status + " <br> " + b;
+                } else {
+                    errorText = "Connection Problem ";
+                }
+            }
+            $.growl(errorText, {
+                icon: 'glyphicon circle_remove',
+                type: 'danger',
+                allow_dismiss: false,
+                position: {
+                    from: "top",
+                    align: "center"
+                },
+                offset: 150,
+                spacing: 50,
+                delay: 15000,
+                onGrowlShow: function() {
+                    utils.hideLoader();
+                }
+            });
+        },
+        showSettingsPage: function() {
+            if (!$('#Settings').parent().hasClass('active')) {
+                $('#MenuTabs li').removeClass('active');
+                $('#Settings').show().parent().addClass('active');
+                $('.tab-content > div').removeClass('active');
+                $('#ExternalContent').addClass('active');
+            };
+            $('#SettingsPanel').height($('body').height() - $('.navbar > .container').height() - $('#footer').height());
+        },
+        hideSettingsPage: function() {
+            $('#MenuTabs li').removeClass('active');
+            $('#Settings').hide().parent().removeClass('active');
+            $('.tab-content > div').removeClass('active');
+            $('#ExternalContent').removeClass('active');
+            $('#TabHome').parent().addClass('active');
+            $('#apps').addClass('active');
+        },
+        setAppNameVisible: function(a) {
+            if (typeof a != 'undefined') {
+                n = a;
+                chrome.storage.local.set({
+                    'appName': a
+                });
+            }
+            if (n) {
+                $('.thumbnail p').show();
+            } else {
+                $('.thumbnail p').hide();
+            }
+        },
+        setTimerTick: function(a) {
+            if (typeof a != 'undefined') {
+                TimerTick = a;
+                chrome.storage.local.set({
+                    'timerTick': a
+                });
+                this.clearTimer();
+            }
+            this.setTimer();
+        },
+        setTimer: function() {
+            var Timer4Json = setInterval(function() {
+                //initMarquee();
+                initSettings();
+                initApp();
+                initMarket();
+                console.log('JSON Interval');
+            }, TimerTick);
+            var Timer4Marquee =  setInterval(function(){
+                initMarquee()
+            },90000);
+            var Timer4Wireless = setInterval(function() {
+                checkWireless()
+            }, 10000);
+            var Timer4Bluetooth = setInterval(function() {
+                checkBluetooth()
+            }, 10000);
+            var Timer4USB = setInterval(function() {
+                checkCloud()
+            }, 10000);
+        },
+        clearTimer: function() {
+            clearInterval(Timer4Json);
+            clearInterval(Timer4Wireless);
+            clearInterval(Timer4Bluetooth);
+            clearInterval(Timer4USB);
+        },
+        setServicesURL: function(a) {
+            s = a;
+            chrome.storage.local.set({
+                'ServicesURL': a
+            });
+        },
+        setMarqueeText: function(a) {
+            $('.js-marquee').html(a);
+        },
+        setInfo: function(a) {
+            $.ajax({
+                beforeSend: function() {
+                    utils.showLoader();
+                },
+                url: s + 'cgi-bin/webif/status-diag.sh',
+                cache: false,
+                timeout: 25000
+            }).done(function(html) {
+                var content = $($.parseHTML(html)).find('#short-status');
+                var infoHTML = '<li>' + $(content).find('li').eq(1).html() + '</li>';
+                infoHTML += '<li>' + $(content).find('li').eq(2).html() + '</li>';
+                infoHTML += '<li>' + $(content).find('li').eq(3).html() + '</li>';
+                infoHTML += '<li id="localtime">' + $(content).find('li').eq(4).html() + '</li>';
+                infoHTML += '<li>' + $(content).find('li').eq(5).html() + '</li>';
+                utils.hideLoader();
+                $('#OtherInfo').html(infoHTML);
+                ConError = false;
+            }).error(function(xhr, ajaxOptions, thrownError) {
+                utils.hideLoader();
+                utils.ShowError(xhr, thrownError);
+            });
+        }
+    }
+}()
+
+    function setTheme(a) {
+        $('link[href*="ardic_"]').remove();
+        chrome.storage.local.set({
+            'theme': a
+        });
+        switch (a) {
+            case '0':
+                utils.loadTheme('/skin/newtab/css/ardic_white.css');
+                console.log('Theme Selected: ' + a);
+                break;
+            case '1':
+                utils.loadTheme('/skin/newtab/css/ardic_dark.css');
+                console.log('Theme Selected: ' + a);
+                break;
+            case '2':
+                utils.loadTheme('/skin/newtab/css/ardic_blue.css');
+                console.log('Theme Selected: ' + a);
+                break;
+            case '3':
+                utils.loadTheme('/skin/newtab/css/ardic_red.css');
+                console.log('Theme Selected: ' + a);
+                break;
+            case '4':
+                utils.loadTheme('/skin/newtab/css/ardic_orange.css');
+                console.log('Theme Selected: ' + a);
+                break;
+            default:
+                console.log('Not regular theme');
+                break;
+        }
+    }
+
+    function getWindriverPage(a, b, c, d, e) {
+        $.ajax({
+            beforeSend: function() {
+                utils.showLoader();
+            },
+            url: a,
+            cache: false,
+            type: b,
+            data: c,
+            processData: false,
+            contentType: false,
+            timeout: 25000
+        }).done(function(html) {
+            var savepart = '';
+            var content = $($.parseHTML(html)).find('form');
+            if (content.length == 0) {
+                content = $($.parseHTML(html)).find('#content');
+                savepart = $($.parseHTML(html)).find('fieldset#save');
+            } else {
+                if (content.html().length < 500) {
+                    content = $($.parseHTML(html)).find('#content');
+                    savepart = $($.parseHTML(html)).find('fieldset#save');
+                }
+            }
+            $(d).html(content);
+            $(d).append(savepart);
+            setLinkstoAjax(d);
+            utils.hideLoader();
+            utils.showSettingsPage();
+            ConError = false;
+            e();
+        }).error(function(xhr, ajaxOptions, thrownError) {
+            utils.hideLoader();
+            utils.ShowError(xhr, thrownError);
+        });
+    }
+
+    function setLinkstoAjax(a) {
+        $(a + ' #save .apply a').each(function() {
+            var text = $(this).html();
+            $(this).html(text.replace('«', ''))
+        });
+        $(a + ' img').each(function() {
+            var imgDump = $(this).attr('src');
+            imgDump = s + imgDump;
+            $(this).attr('src', imgDump);
+        });
+        $(a + ' a').each(function() {
+            $(this).click(function(e) {
+                e.preventDefault();
+                getWindriverPage(s + 'cgi-bin/webif/' + $(this).attr('href'), 'GET', '', a);
+            })
+        })
+        $(a + ' select').each(function() {
+            if ($(this).attr('onchange') == 'modechange(this)') {
+                var element = $(this);
+                $(this).on('change', function() {
+                    modechange(element)
+                })
+
+            } else if ($(this).attr('onchange') == 'setAPN(this)') {
+                var element = $(this);
+                $(this).on('change', function() {
+                    setAPN(element)
+                })
+            }
+            $(this).removeAttr('onchange');
+        })
+        $('form').on('submit', function(e) {
+            e.preventDefault();
+            var f = e.target,
+                formData = new FormData(f);
+            getWindriverPage(s + $(this).attr('action'), $(this).attr('method'), formData, a)
+            return false;
+        });
+    }
+
+    function initMarquee() {
+        console.log('Marquee interval');
+        var data = utils.loadResource("/content/config_marquee.json", "");
+        if (dMarquee == data) {
+            dMarquee = data;
+        } else {
+            dMarquee = data;
+            utils.setMarqueeText(data.MarqueeText);
+        }
+        $('.marquee').marquee({
+            duration: 32000
+        });
+
+    }
+
+    function initSettings() {
+        var data = utils.loadResource("/content/config_settings.json", "");
+        if (dSetting == data) {
+            dSetting = data;
+        } else {
+            dSetting = data;
+            $("#ConfigMenu").html('');
+            var MenuListHTML = "";
+            $.each(data.SettingsMenu, function(key, val) {
+                MenuListHTML += "<li><a href=" + s + val.Link + ">" + val.Name + "</a></li>"
+            });
+            $("#ConfigMenu").append(MenuListHTML);
+            $('#ConfigMenu a').click(function(e) {
+                e.preventDefault();
+                getWindriverPage($(this).attr('href'), 'GET', '', '#ExternalContent');
+            });
+        }
+    }
+
+    function initApp() {
+        var data = utils.loadResource("/content/config_apps.json", "");
+        if (dApp == data) {
+            dApp = data;
+        } else {
+            dApp = data;
+            var ItemsHTML = "",
+                IndicatiorHTML = "",
+                Linebreak = 5,
+                ItemRow = 0,
+                ItemCount = 0;
+            $.each(data.InstalledApp, function(key, val) {
+                if ((ItemCount % Linebreak) === 0) {
+                    if (ItemCount === 0) {
+                        ItemsHTML += '<div class="item active"><div class="row-fluid"><div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>';
+                        IndicatiorHTML += '<li data-target="#InstalltedAppsCarousel" data-slide-to=' + ItemRow + ' class="active"></li>';
+                    } else {
+                        ItemsHTML += '<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div></div></div><div class="item"><div class="row-fluid"><div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>';
+                        IndicatiorHTML += '<li data-target="#InstalltedAppsCarousel" data-slide-to=' + ItemRow + '></li>';
+                    }
+                    ItemsHTML += '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="' + val.Link + '" class="thumbnail"><img src="' + val.Icon + '"  alt="Image" style="max-width:100%;" /> <p>' + val.Name + '</p></a></div>';
+                    ItemRow++;
+                } else {
+                    ItemsHTML += '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="' + val.Link + '" class="thumbnail"><img src="' + val.Icon + '" alt="Image" style="max-width:100%;" /> <p>' + val.Name + '</p></a></div>';
+                }
+                ItemCount++;
+            });
+            if (ItemRow == 1) {
+                $('#InstalltedAppsIndicators,#InstalledAppsNavLeft,#InstalledAppsNavRight').hide();
+            }
+            $('#InstalltedAppsIndicators').html(IndicatiorHTML);
+            $("#InstalltedAppsInner").html(ItemsHTML);
+            $('#InstalltedAppsCarousel').carousel({
+                interval: false
+            });
+
+            $('#InstalltedAppsInner a').click(function(e) {
+                if (dmode) console.log($(this).attr('href').substring(0, 4));
+                //e.preventDefault();
+                //IF External Link 
+                /*if($(this).attr('href').substring(0, 4 ) == 'http')
+                {   
+                    console.log($(this).attr('href'));
+                    var height = $('body').height()-$('.navbar > .container').height()-$('#footer').height();
+                    var html = '<iframe id="iframe" frameborder="0" src="'+$(this).attr('href')+'" style="height:'+height+'px; width:100%"></iframe>';
+                    $('#ExternalContent').html(html);
+                    $('.tab-content > div').removeClass('active');$('#ExternalContent').addClass('active');
+                    $('#MenuTabs li').removeClass('active');
+                }
+                else
+                {
+                    window.open($(this).attr('href'),"_self")
+                }*/
+            })
+        }
+    }
+
+    function initMarket() {
+        var data = utils.loadResource("/content/config_market.json", "");
+        if (dMarket == data) {
+            dMarket = data;
+        } else {
+            dMarket = data;
+            ItemsHTML = "";
+            IndicatiorHTML = "";
+            Linebreak = 5;
+            ItemRow = 0;
+            ItemCount = 0;
+            $.each(data.MarketApp, function(key, val) {
+                if ((ItemCount % Linebreak) == 0) {
+                    if (ItemCount == 0) {
+                        ItemsHTML += '<div class="item active"><div class="row-fluid"><div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>';
+                        IndicatiorHTML += '<li data-target="#MarketAppsCarousel" data-slide-to=' + ItemRow + ' class="active"></li>';
+                    } else {
+                        ItemsHTML += '<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div></div></div><div class="item"><div class="row-fluid"><div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>';
+                        IndicatiorHTML += '<li data-target="#MarketAppsCarousel" data-slide-to=' + ItemRow + '></li>';
+                    }
+                    ItemsHTML += '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="' + val.Link + '" class="thumbnail"><img src="' + val.Icon + '"  alt="Image" style="max-width:100%;" /> <p>' + val.Name + '</p></a></div>';
+                    ItemRow++;
+                } else {
+                    ItemsHTML += '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="' + val.Link + '" class="thumbnail"><img src="' + val.Icon + '" alt="Image" style="max-width:100%;" /> <p>' + val.Name + '</p></a></div>';
+                }
+                ItemCount++;
+            });
+            if (ItemRow == 1) {
+                $('#MarketAppsIndicators,#MarketAppsNavLeft,#MarketAppsNavRight').hide();
+            }
+
+            $('#MarketAppsIndicators').html(IndicatiorHTML);
+            $("#MarketAppsInner").html(ItemsHTML);
+            $('#MarketAppsCarousel').carousel({
+                interval: false
+            });
+
+        }
+    }
+
+    function initConfig() {
+        //console.log('InitConfig');
+        var data = utils.loadResource("/content/config.json", "");
+        if (d == data) {
+            d = data;
+        } else {
+            d = data;
+            utils.setMarqueeText(data.MarqueeText);
+            $("#ConfigMenu").html('');
+            $('#InstalltedAppsIndicators').html('');
+            $("#InstalltedAppsInner").html('');
+            $('#MarketAppsIndicators').html('');
+            $("#MarketAppsInner").html('');
+            var MenuListHTML = "";
+            $.each(data.SettingsMenu, function(key, val) {
+                MenuListHTML += "<li><a href=" + s + val.Link + ">" + val.Name + "</a></li>"
+            });
+            $("#ConfigMenu").append(MenuListHTML);
+            var ItemsHTML = "",
+                IndicatiorHTML = "",
+                Linebreak = 5,
+                ItemRow = 0,
+                ItemCount = 0;
+            $.each(data.InstalledApp, function(key, val) {
+                if ((ItemCount % Linebreak) == 0) {
+                    if (ItemCount == 0) {
+                        ItemsHTML += '<div class="item active"><div class="row-fluid"><div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>';
+                        IndicatiorHTML += '<li data-target="#InstalltedAppsCarousel" data-slide-to=' + ItemRow + ' class="active"></li>';
+                    } else {
+                        ItemsHTML += '<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div></div></div><div class="item"><div class="row-fluid"><div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>';
+                        IndicatiorHTML += '<li data-target="#InstalltedAppsCarousel" data-slide-to=' + ItemRow + '></li>';
+                    }
+                    ItemsHTML += '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="' + val.Link + '" class="thumbnail"><img src="' + val.Icon + '"  alt="Image" style="max-width:100%;" /> <p>' + val.Name + '</p></a></div>';
+                    ItemRow++;
+                } else {
+                    ItemsHTML += '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="' + val.Link + '" class="thumbnail"><img src="' + val.Icon + '" alt="Image" style="max-width:100%;" /> <p>' + val.Name + '</p></a></div>';
+                }
+                ItemCount++;
+            });
+        }
+        if (ItemRow == 1) {
+            $('#InstalltedAppsIndicators,#InstalledAppsNavLeft,#InstalledAppsNavRight').hide();
+        }
+        $('#InstalltedAppsIndicators').html(IndicatiorHTML);
+        $("#InstalltedAppsInner").html(ItemsHTML);
+        $('#InstalltedAppsCarousel').carousel({
+            interval: false
+        });
+        ItemsHTML = "";
+        IndicatiorHTML = "";
+        Linebreak = 5;
+        ItemRow = 0;
+        ItemCount = 0;
+        $.each(data.MarketApp, function(key, val) {
+            if ((ItemCount % Linebreak) == 0) {
+                if (ItemCount == 0) {
+                    ItemsHTML += '<div class="item active"><div class="row-fluid"><div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>';
+                    IndicatiorHTML += '<li data-target="#MarketAppsCarousel" data-slide-to=' + ItemRow + ' class="active"></li>';
+                } else {
+                    ItemsHTML += '<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div></div></div><div class="item"><div class="row-fluid"><div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>';
+                    IndicatiorHTML += '<li data-target="#MarketAppsCarousel" data-slide-to=' + ItemRow + '></li>';
+                }
+                ItemsHTML += '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="' + val.Link + '" class="thumbnail"><img src="' + val.Icon + '"  alt="Image" style="max-width:100%;" /> <p>' + val.Name + '</p></a></div>';
+                ItemRow++;
+            } else {
+                ItemsHTML += '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="' + val.Link + '" class="thumbnail"><img src="' + val.Icon + '" alt="Image" style="max-width:100%;" /> <p>' + val.Name + '</p></a></div>';
+            }
+            ItemCount++;
+        });
+        if (ItemRow == 1) {
+            $('#MarketAppsIndicators,#MarketAppsNavLeft,#MarketAppsNavRight').hide();
+        }
+
+        $('#MarketAppsIndicators').html(IndicatiorHTML);
+        $("#MarketAppsInner").html(ItemsHTML);
+        $('#MarketAppsCarousel').carousel({
+            interval: false
+        });
+        $('#ConfigMenu a').click(function(e) {
+            e.preventDefault();
+            getWindriverPage($(this).attr('href'), 'GET', '');
+        });
+        $('#InstalltedAppsInner a').click(function(e) {
+            console.log($(this).attr('href').substring(0, 4));
+            //e.preventDefault();
+            //IF External Link 
+            if ($(this).attr('href').substring(0, 4) == 'http') {
+                window.open($(this).attr('href'), "_self")
+                /*console.log($(this).attr('href'));
+                    var height = $('body').height()-$('.navbar > .container').height()-$('#footer').height();
+                    var html = '<iframe id="iframe" frameborder="0" src="'+$(this).attr('href')+'" style="height:'+height+'px; width:100%"></iframe>';
+                   
+                    $('#ExternalContent').html(html);
+                   
+                    $('.tab-content > div').removeClass('active');$('#ExternalContent').addClass('active');
+                    $('#MenuTabs li').removeClass('active');*/
+            } else {
+                window.open($(this).attr('href'), "_self")
+            }
+        })
+
+    }
+
+    function initSetup() {
+        if (dmode) console.log('init Setup');
+
+        $('#ThemeMenu span').click(function(e) {
+            e.preventDefault();
+            setTheme($(this).attr('tabindex'));
+        });
+        $('#wrap,#footer').hide();
+        $('#setup button').click(function(e) {
+            e.preventDefault();
+            switch (e.target.id) {
+                case 'btn_setups_start':
+                    getWindriverPage(s + 'cgi-bin/webif/network.sh', 'GET', '', '#setupNetwork', function() {
+                        if (dmode) console.log('callback running');
+                        if (!ConError) {
+                            $('.part0').fadeOut(500, function() {
+                                $('.part1').fadeIn(500);
+                            });
+                        }
+                    });
+                    break;
+                case 'btn_setup_prev_0':
+                    $('.part1').fadeOut(500, function() {
+                        $('.part0').fadeIn(500);
+                    });
+                    break;
+                case 'btn_setup_next_1':
+                    $('.part2').fadeOut(500, function() {
+                        $('.part1').fadeIn(500);
+                    });
+                    break;
+                case 'btn_setup_prev_1':
+                    $('.part2').fadeOut(500, function() {
+                        $('.part1').fadeIn(500);
+                    });
+                    break;
+                case 'btn_setup_next_2':
+                    getWindriverPage(s + 'cgi-bin/webif/status-usb.sh', 'GET', '', '#setupUSB', function() {
+                        $('.part1').fadeOut(500, function() {
+                            $('.part2').fadeIn(500);
+                        });
+                    });
+                    break;
+                case 'btn_setup_prev_2':
+                    $('.part3').fadeOut(500, function() {
+                        $('.part2').fadeIn(500);
+                    });
+                    break;
+                case 'btn_setup_next_3':
+                    $('.part2').fadeOut(500, function() {
+                        $('.part3').fadeIn(500);
+                    });
+                    break;
+                case 'btn_setup_prev_3':
+                    $('.part4').fadeOut(500, function() {
+                        $('.part3').fadeIn(500);
+                    });
+                    break;
+                case 'btn_setup_next_4':
+                    $('.part3').fadeOut(500, function() {
+                        $('.part4').fadeIn(500);
+                    });
+                    break;
+                case 'btn_setups_close':
+                    $('.part4').fadeOut(500, function() {
+                        $('#setup').remove();
+                        initReady();
+                        $('#wrap,#footer').fadeIn(1000);
+                        $('.marquee').marquee({
+                            duration: 32000
+                        });
+                    });
+                    Setup = true;
+                    chrome.storage.local.set({
+                        'SetupStat': true
+                    });
+                    utils.hideSettingsPage();
+                    break;
+            }
+        });
+
+
+        // Click Screen Calibration
+        $('#btn_calibration').click(function() {
+            if (dmode) console.log('Click Calibration');
+            // Bu localden file cagiriyor
+            // utils.loadResource("/content/config_marquee.json","");
+
+        });
+
+        if (dmode) {
+            $('#setServicesURL').removeClass('hide').addClass('show');
+
+            $('#btn_setserviceip').click(function(e) {
+                e.preventDefault();
+                $('#serviceip').html($('#inp_serviceip').val());
+                utils.setServicesURL($('#inp_serviceip').val());
+                utils.setInfo();
+                if (!ConError) $('#setServicesURL').removeClass('show').addClass('hide');
+                $('.part0 .notification .success').removeClass('hide').delay(10000).fadeOut(500);
+            });
+        }
+
+    }
+
+    function initReady() {
+
+        $('#setup').remove();
+        // Load Local Settings
+        chrome.storage.local.get(null, function(data) {
+            if (typeof data.ServicesURL != 'undefined') {
+                utils.setServicesURL(data.ServicesURL);
+            } else {
+                utils.setServicesURL(s);
+            }
+            $('#Info #serviceip').html(s);
+            utils.setInfo();
+            utils.setAppNameVisible(data.appName);
+            setTheme(data.theme);
+            if (typeof data.WirelessStatus != 'undefined') {
+                setWireless(data.WirelessStatus);
+            } else {
+                setWireless(window.navigator.onLine);
+            }
+            if (typeof data.BluetoothStatus != 'undefined') {
+                setBluetooth(data.BluetoothStatus);
+            }
+            if (typeof data.CloudStatus != 'undefined') {
+                setCloud(data.CloudStatus);
+            } else {
+                try {
+                    chrome.experimental.arcsp.queryCloudConnection(function cloudStatus(param1) {
+                        if (param1 == 1) {
+                            setCloud(true)
+                        } else {
+                            setCloud(false);
+                        }
+                    });
+                } catch (err) {
+
+                }
+            }
+        });
+
+        initSettings();
+        initApp();
+        initMarket();
+        //initMarquee();
+        utils.setTimer();
+        $('#Info #version').html(utils.version);
+        $('#Info #edt_serviceip').click(function(e) {
+            e.preventDefault();
+            $('#edt_serviceip, #serviceip').hide();
+            $('#setServicesURL').removeClass('hide').addClass('show');
+            $('#inp_serviceip').val($('#serviceip').html());
+        })
+        $('#btn_setserviceip').click(function(e) {
+            e.preventDefault();
+            $('#serviceip').html($('#inp_serviceip').val());
+            utils.setServicesURL($('#inp_serviceip').val());
+            $('#edt_serviceip , #serviceip').show();
+            $('#setServicesURL').removeClass('show').addClass('hide');
+            initSettings();
+            utils.setInfo();
+        });
+
+        $('#MenuTabs').tab();
+
+        $('#ThemeMenu span').click(function(e) {
+            e.preventDefault();
+            setTheme($(this).attr('tabindex'));
+        });
+        $('#SettingsPanel').height($('body').height() - $('.navbar > .container').height() - $('#footer').height() + 100).css('right', '-292px');
+        $('#btn_settings').clickToggle(function() {
+            $('#SettingsPanel').height($('body').height() - $('.navbar > .container').height() - $('#footer').height() + 100);
+            $('#SettingsPanel').show().animate({
+                right: 0
+            }, 700);
+        }, function() {
+            $('#SettingsPanel').animate({
+                right: -292
+            }, 700, function() {
+                $(this).hide()
+            });
+        });
+        $('#navbar-collapse,#Content,#footer').click(function() {
+            $("#SettingsPanel").animate({
+                right: -292
+            }, 700, function() {
+                $(this).hide()
+            });
+        });
+
+        initMarquee();
+
+
+
+        /* Start Wireless Click
+    $('#btn_wireless').click(function(e){
+        e.preventDefault();
+        console.log('wireless click');
+        if($(this).find('span').hasClass('active'))// Zana Bluetooth Active to passive
+        {
+            // Zana post to  passive data with loadResource(link,'text')
+            setWireless(false);
+            $(this).find('span').removeClass('active');
+            $(this).find('span').addClass('passive');   
+        }
+        else // Zana Bluetooth Passive to active
+        {
+            // Zana post to  active data with loadResource(link,'text')
+            setWireless(true);
+            $(this).find('span').removeClass('passive');
+            $(this).find('span').addClass('active');
+        }
+        
+    });
+    //End Wireless Click */
+
+        /*Start Bluetooth Click
+    $('#btn_bluetooth').click(function(e){
+        e.preventDefault();
+        console.log('bluetooth click');
+        if($(this).find('span').hasClass('active')) // Zana Bluetooth Active to passive
+        {
+            // Zana post to  passive data with loadResource(link,'text')
+            setBluetooth(false);
+            $(this).find('span').removeClass('active');
+            $(this).find('span').addClass('passive');   
+        }
+        else // Zana Bluetooth Passive to active
+        {
+            // Zana post to  active data with loadResource(link,'text')
+            setBluetooth(true);
+            $(this).find('span').removeClass('passive');
+            $(this).find('span').addClass('active');
+        }
+        
+    });
+    //End Bluetooth Click*/
+
+        /*Start Cloud Click
+    $('#btn_usb').click(function(e){
+        e.preventDefault();
+        console.log('usb click');
+        if($(this).find('span').hasClass('active')) // Zana Bluetooth Active to passive
+        {
+            // Zana post to  passive data with loadResource(link,'text')
+            setCloud(false);
+            $(this).find('span').removeClass('active');
+            $(this).find('span').addClass('passive');   
+        }
+        else // Zana Bluetooth Passive to active
+        {
+            // Zana post to  active data with loadResource(link,'text')
+            setCloud(true);
+            $(this).find('span').removeClass('passive');
+            $(this).find('span').addClass('active');
+        }
+        
+    });
+    //End Cloud Click*/
+
+        // initializePage();
+    }
+
+    function checkWireless() {
+        ServicesStatus = window.navigator.onLine;
+        if (typeof ServicesStatus != 'undefined') {
+            setWireless(ServicesStatus);
+        } else {
+            console.log('Wireless Call Failed');
+        }
+    };
+
+function checkBluetooth() {
+    ServicesStatus = false; //utils.loadResource("/content/config.json","text")
+    if (typeof ServicesStatus != 'undefined') {
+        setBluetooth(ServicesStatus);
+    } else {
+        console.log('Bluetooth Call Failed');
+    }
+};
+
+function checkCloud(a) {
+    ServicesStatus = 0;
+    try {
+        chrome.experimental.arcsp.queryCloudConnection(function cloudStatus(param1) {
+            if (param1 == 1) {
+                setCloud(true)
+            } else {
+                setCloud(false);
+            }
+        });
+    } catch (err) {
+        //console.log(err);
+    }
+};
+
+function setWireless(a) {
+    console.log('wireless set');
+    chrome.storage.local.set({
+        'WirelessStatus': a
+    });
+    var status = a;
+    if (status) {
+        console.log('wireless set true');
+        if (!$('#btn_wireless').hasClass('active')) {
+            $('#btn_wireless').removeClass('passive');
+            $('#btn_wireless').addClass('active');
+            $('#btn_wireless span').removeClass('passive');
+            $('#btn_wireless span').addClass('active');
+        }
+    } else {
+        console.log('wireless set false');
+        if ($('#btn_wireless').hasClass('active')) {
+            $('#btn_wireless').removeClass('active');
+            $('#btn_wireless').addClass('passive');
+            $('#btn_wireless span').removeClass('active');
+            $('#btn_wireless span').addClass('passive');
+        }
+    }
+};
+
+function setBluetooth(a) {
+    console.log('bluetooth set');
+    chrome.storage.local.set({
+        'BluetoothStatus': a
+    });
+    var status = a;
+    if (status) {
+        console.log('bluetooth set true');
+        if (!$('#btn_bluetooth').hasClass('active')) {
+            $('#btn_bluetooth').removeClass('passive');
+            $('#btn_bluetooth').addClass('active');
+            $('#btn_bluetooth span').removeClass('passive');
+            $('#btn_bluetooth span').addClass('active');
+        }
+    } else {
+        console.log('bluetooth set false');
+        if ($('#btn_bluetooth').hasClass('active')) {
+            $('#btn_bluetooth').removeClass('active');
+            $('#btn_bluetooth').addClass('passive');
+            $('#btn_bluetooth span').removeClass('active');
+            $('#btn_bluetooth span').addClass('passive');
+        }
+    }
+};
+
+function setCloud(a) {
+    console.log('cloud set');
+    chrome.storage.local.set({
+        'CloudStatus': a
+    });
+    var status = a; // Remove this
+    if (status) {
+        console.log('cloud set true');
+        if (!$('#btn_usb').hasClass('active')) {
+            $('#btn_usb').removeClass('passive');
+            $('#btn_usb').addClass('active');
+            $('#btn_usb span').removeClass('passive');
+            $('#btn_usb span').addClass('active');
+        }
+    } else {
+        console.log('cloud set false');
+        if ($('#btn_usb').hasClass('active')) {
+            $('#btn_usb').removeClass('active');
+            $('#btn_usb').addClass('passive');
+            $('#btn_usb span').removeClass('active');
+            $('#btn_usb span ').addClass('passive');
+        }
+    }
+}
+
+//initConfig();
+//initReady();
+
+function DeleteDB() {
+    chrome.storage.local.clear();
+}
+
+chrome.storage.local.get(null, function(data) {
+
+    if (typeof data.DevMode != 'undefined') {
+        dmode = data.DevMode
+    } else {
+        chrome.storage.local.set({
+            'DevMode': dmode
+        });
+    }
+    if (typeof data.ServicesURL != 'undefined') {
+        utils.setServicesURL(data.ServicesURL);
+    } else {
+        utils.setServicesURL(s);
+    }
+    $('#Info #serviceip').html(s);
+    $('#inp_serviceip').val(s);
+    if (dmode) console.log('Setup Status: ' + Setup);
+    if (dmode) console.log('Server IP: ' + s);
+    if (typeof data.SetupStat != 'undefined') {
+        Setup = data.SetupStat
+    } else {
+        chrome.storage.local.set({
+            'SetupStat': Setup
+        });
+    }
+    if (!Setup) {
+        initSetup();
+    } else {
+        initReady();
+    };
+   /* try {
+        $('body').onmousedown(function(event) {
+            event.preventDefault ? event.preventDefault() : event.returnValue = false;
+        });
+    } catch (err) {
+
+    }
+*/
+    document.body.ondragstart = function() { return false; };
+    if (dmode) {
+        $('#edt_serviceip').removeClass('hide');
+        chrome.storage.onChanged.addListener(function(changes, namespace) {
+            for (key in changes) {
+                var storageChange = changes[key];
+                console.log('Storage key "%s" in namespace "%s" changed. ' +
+                    'Old value was "%s", new value is "%s".',
+                    key,
+                    namespace,
+                    storageChange.oldValue,
+                    storageChange.newValue);
+            }
+        });
+    } else {
+        $('#edt_serviceip').addClass('hide');
+    }
+
+});

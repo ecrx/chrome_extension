@@ -1,0 +1,22 @@
+[
+	{"title":"Facebook","url":"http://www.facebook.com/","img":"int/www.facebook.com.gif","bgColor":"#3A5896"},
+	{"type":"google","title":"Youtube","url":"http://www.youtube.com","img":"int/www.youtube.com.png"},
+	{"type":"google","title":"Gmail","url":"http://mail.google.com","img":"int/www.gmail.com.png"},
+	{"title":"Outlook","url":"http://www.outlook.com","img":"int/www.outlook.com.png"},
+	{"type":"google","title":"Outlook","url":"http://maps.google.com","img":"int/googlemaps.png"},
+	
+	{"title":"ynet","url":"http://www.ynet.co.il","img":"il/www.ynet.co.il.gif"},
+	{"title":"Walla","url":"http://www.walla.co.il","img":"il/www.walla.co.il.jpg"},	
+	{"title":"Mako","url":"http://www.mako.co.il","img":"il/www.mako.co.il.jpg","bgColor":"#060606"},
+	{"title":"Tapuz","url":"http://www.tapuz.co.il/","img":"il/www.tapuz.co.il.gif"},
+	
+	{"title":"Twitter","url":"http://www.twitter.com/","img":"int/www.twitter.com.png"},
+	{"title":"Linkedin","url":"http://www.linkedin.com/","img":"int/www.linkedin.com.gif"},
+	{"title":"Amazon","url":"http://www.amazon.com/","img":"int/www.amazon.com.gif"},
+	{"title":"Instagram","url":"http://instagram.com/","img":"int/www.instagram.com.gif"},
+	
+	{"title":"nana10","url":"http://nana10.co.il/","img":"il/www.nana10.co.il.jpg"},
+	{"title":"ONE","url":"http://one.co.il/","img":"il/www.one.co.il.gif"},
+	{"title":"Zap","url":"http://zap.co.il/","img":"il/www.zap.co.il.png","bgColor":"#197EDA"},
+	{"title":"Globes","url":"http://globes.co.il/","img":"il/www.globes.co.il.gif"}
+]

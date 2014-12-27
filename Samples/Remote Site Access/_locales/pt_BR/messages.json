@@ -1,0 +1,347 @@
+{
+   "bookmarks": {
+      "message": "Favoritos"
+   },
+   "cleanhistory": {
+      "message": "Limpar Hist\u00F3ria"
+   },
+   "clicktostart": {
+      "message": "Clique aqui para iniciar!"
+   },
+   "dont_show_on_this_page": {
+      "message": "N\u00E3o mostrar esta p\u00E1gina"
+   },
+   "downloads": {
+      "message": "Downloads"
+   },
+   "extensions": {
+      "message": "Extens\u00F5es"
+   },
+   "favadd_add": {
+      "message": "Adicionar"
+   },
+   "favadd_continue": {
+      "message": "Continuar"
+   },
+   "favadd_customurl": {
+      "message": "Digite o nome do site ou URL"
+   },
+   "favadd_gallery": {
+      "message": "Galeria"
+   },
+   "favadd_go": {
+      "message": "Ir"
+   },
+   "favadd_save": {
+      "message": "Salvar"
+   },
+   "favadd_title": {
+      "message": "Adicionar Placas"
+   },
+   "favadd_tooltip": {
+      "message": "Clique no Bot\u00E3o + para adicionar sites a essa Pagina"
+   },
+   "favadd_tooltip_imagefile": {
+      "message": "Usar imagem de arquivo"
+   },
+   "favadd_tooltip_screenshot": {
+      "message": "Salve uma captura de tela"
+   },
+   "favadd_url": {
+      "message": "URL"
+   },
+   "favgrp_addgroup": {
+      "message": "Adicionar"
+   },
+   "favgrp_create": {
+      "message": "Criar"
+   },
+   "favgrp_delconfirm": {
+      "message": "Tem certeza que quer deletar esse grupo ? Todos os sites relacionados a esse grupo ser\u00E3o apagados"
+   },
+   "favgrp_editgroup": {
+      "message": "Editar grupo"
+   },
+   "favgrp_groupname": {
+      "message": "Nome do grupo"
+   },
+   "favgrp_pickcolor": {
+      "message": "Escolha uma cor"
+   },
+   "favgrp_savegroup": {
+      "message": "Salvar"
+   },
+   "favorites": {
+      "message": "Favorites"
+   },
+   "gallery_add": {
+      "message": "Adicionar"
+   },
+   "gallery_cat_0195d37c": {
+      "message": "Finan\u00E7as"
+   },
+   "gallery_cat_0233966f": {
+      "message": "Shopping"
+   },
+   "gallery_cat_29ffd710": {
+      "message": "Utilidades e servi\u00E7os"
+   },
+   "gallery_cat_2c52cbb0": {
+      "message": "Refer\u00EAncia"
+   },
+   "gallery_cat_331338ac": {
+      "message": "Social & Comunica\u00E7\u00E3o"
+   },
+   "gallery_cat_7f091c3b": {
+      "message": "Lazer"
+   },
+   "gallery_cat_9d7dd9d7": {
+      "message": "Inform\u00E1tica & Tecnologia"
+   },
+   "gallery_cat_c04ecbb5": {
+      "message": "Media & Divers\u00E3o"
+   },
+   "gallery_cat_cf220d68": {
+      "message": "Noticias , Revistas and Portais"
+   },
+   "gallery_title": {
+      "message": "Escolha  sites"
+   },
+   "history": {
+      "message": "Hist\u00F3rico"
+   },
+   "info_about": {
+      "message": "Sobre N\u00F3s"
+   },
+   "info_contactus": {
+      "message": "Contato"
+   },
+   "info_eula": {
+      "message": "EULA"
+   },
+   "info_privacy": {
+      "message": "Privacidade"
+   },
+   "info_rateus": {
+      "message": ""
+   },
+   "info_uninstall": {
+      "message": "Desinstalar"
+   },
+   "layout_dialsmaxsize": {
+      "message": "Max Tamanho"
+   },
+   "layout_dialsmaxsize_large": {
+      "message": "Grande"
+   },
+   "layout_dialsmaxsize_medium": {
+      "message": "M\u00E9dio"
+   },
+   "layout_dialsmaxsize_small": {
+      "message": "Pequeno"
+   },
+   "layout_dialsshape": {
+      "message": "Forma"
+   },
+   "layout_dialsshape_box": {
+      "message": "Amplo"
+   },
+   "layout_dialsshape_flat": {
+      "message": "Plano"
+   },
+   "layout_maxcolumns": {
+      "message": "Max  n\u00FAmero de colunas"
+   },
+   "layout_showtitles": {
+      "message": "T\u00EDtulos"
+   },
+   "layout_spacing": {
+      "message": "Espa\u00E7o"
+   },
+   "layout_spacing_big": {
+      "message": "Grande"
+   },
+   "layout_spacing_medium": {
+      "message": "M\u00E9dio"
+   },
+   "layout_spacing_none": {
+      "message": "Nenhum"
+   },
+   "layout_spacing_small": {
+      "message": "Pequeno"
+   },
+   "layout_title": {
+      "message": "Layout"
+   },
+   "mostvisited": {
+      "message": "Mais visitados"
+   },
+   "newtab": {
+      "message": "Nova Guia"
+   },
+   "open_as_full_screen": {
+      "message": "Abrir tela cheia"
+   },
+   "open_as_pinned_tab": {
+      "message": "Abrir como guia marcada"
+   },
+   "open_as_regular_tab": {
+      "message": "Abrir como guia normal"
+   },
+   "open_as_window": {
+      "message": "Abrir como janela"
+   },
+   "options": {
+      "message": "Op\u00E7\u00F5es"
+   },
+   "plugin_activetabs": {
+      "message": "Guias Ativas"
+   },
+   "plugin_addgroup": {
+      "message": "Adicionar Grupo"
+   },
+   "plugin_chrome": {
+      "message": "Chrome"
+   },
+   "plugin_delgroup": {
+      "message": "Deletar Grupo"
+   },
+   "plugin_editgroup": {
+      "message": "Editar  Grupo"
+   },
+   "plugin_readitlater": {
+      "message": "Leia a Lista"
+   },
+   "plugin_readitlater_menu": {
+      "message": "Leia mais tarde"
+   },
+   "plugin_recentlyclosed": {
+      "message": "Guias Recentemente fechadas"
+   },
+   "plugin_webapps": {
+      "message": "Apps"
+   },
+   "ps_action": {
+      "message": "Obtenha o Foxtab para Android!"
+   },
+   "ps_login_h": {
+      "message": "Login no Google Play"
+   },
+   "ps_login_l1": {
+      "message": "Fa\u00E7a login em sua conta para obter o novo app foxtab em seu dispositivo agora mesmo!"
+   },
+   "ps_promo_close": {
+      "message": "Fechar"
+   },
+   "ps_promo_download": {
+      "message": "Baixar o app Foxtab"
+   },
+   "ps_promo_h": {
+      "message": "Novo! Foxtab para Android!"
+   },
+   "ps_promo_no": {
+      "message": "N\u00E3o"
+   },
+   "ps_promo_p1": {
+      "message": "Conhe\u00E7a o novo membro da fam\u00EDlia Foxtab: \u003Cbr\u003E O novo aplicativo Foxtab para o seu dispositivo Android."
+   },
+   "ps_promo_p2": {
+      "message": "Leve suas abas com voc\u00EA para qualquer lugar."
+   },
+   "ps_promo_q": {
+      "message": "Gostaria de instalar o Foxtab em seus dispositivos Android?"
+   },
+   "ps_promo_retry": {
+      "message": "Tentar novamente"
+   },
+   "ps_promo_sorry": {
+      "message": "Desculpe..."
+   },
+   "ps_promo_sorry_p1": {
+      "message": "No momento, o app Foxtab est\u00E1 dispon\u00EDvel apenas para dispositivos Android."
+   },
+   "ps_promo_yes": {
+      "message": "Sim!"
+   },
+   "ps_success_great": {
+      "message": "\u00D3timo!"
+   },
+   "ps_success_h": {
+      "message": "Sucesso!"
+   },
+   "ps_success_msg": {
+      "message": "O aplicativo foi instalado com sucesso. Agradecemos a sua escolha."
+   },
+   "ps_sucesss_p1": {
+      "message": "O app Foxtab foi instalado com sucesso em seu dispositivo. Procure-o no menu de aplicativos e aproveite suas Abas, em qualquer lugar!"
+   },
+   "ps_toast_download": {
+      "message": "Baixar agora"
+   },
+   "ps_toast_p1": {
+      "message": "Leve suas abas com voc\u00EA para qualquer lugar."
+   },
+   "ps_toast_p2": {
+      "message": "Experimente agora o novo Foxtab para Android, \u00E9 \u003Cstrong\u003EGr\u00E1tis!\u003C/strong\u003E"
+   },
+   "readlist_all": {
+      "message": "Tudo"
+   },
+   "readlist_flagged": {
+      "message": "Marcado"
+   },
+   "readlist_last7days": {
+      "message": "Nos \u00FAltimos 7 dias"
+   },
+   "readlist_older": {
+      "message": "Mais velho"
+   },
+   "readlist_thismonth": {
+      "message": "Este m\u00EAs"
+   },
+   "readlist_today": {
+      "message": "Hoje"
+   },
+   "readlist_yesterday": {
+      "message": "Ontem"
+   },
+   "remove_app": {
+      "message": ""
+   },
+   "remove_from_chrome": {
+      "message": "Remover do Google Chrome"
+   },
+   "restore_all": {
+      "message": "Restaurar todas"
+   },
+   "search": {
+      "message": "Pesquisar"
+   },
+   "settings": {
+      "message": "Configura\u00E7\u00F5es"
+   },
+   "theme_background": {
+      "message": "Fundos"
+   },
+   "theme_custombg": {
+      "message": "Background personalizado"
+   },
+   "theme_illumination": {
+      "message": "Ilumina\u00E7\u00E3o"
+   },
+   "theme_title": {
+      "message": "Tema"
+   },
+   "thumbnail_removed": {
+      "message": "Miniatura removida"
+   },
+   "undo": {
+      "message": "Desfazer"
+   },
+   "upgrade_msg": {
+      "message": "Sua nova guia  acaba de ser atualizada."
+   },
+   "web": {
+      "message": "Web"
+   }
+}

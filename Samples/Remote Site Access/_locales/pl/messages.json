@@ -1,0 +1,64 @@
+{
+   "apps": {
+      "message": "Apps"
+   },
+   "dont_show_on_this_page": {
+      "message": "Nie pokazuj na tej stronie"
+   },
+   "favorites": {
+      "message": "Favorites"
+   },
+   "most_visited": {
+      "message": "Najcz\u0119stsze"
+   },
+   "newtab": {
+      "message": "Nowa karta"
+   },
+   "open_as_full_screen": {
+      "message": "Otw\u00F3rz na pe\u0142nym ekranien"
+   },
+   "open_as_pinned_tab": {
+      "message": "Otw\u00F3rz jako przypi\u0119t\u0105 kart\u0119"
+   },
+   "open_as_regular_tab": {
+      "message": "Otw\u00F3rz jako zwyk\u0142\u0105 kart\u0119"
+   },
+   "open_as_window": {
+      "message": "Otw\u00F3rz jako okno"
+   },
+   "opened_tabs": {
+      "message": "Opened tabs"
+   },
+   "options": {
+      "message": "Opcje"
+   },
+   "recently_closed": {
+      "message": "Ostatnio zamkni\u0119te"
+   },
+   "remove_app": {
+      "message": "Usun\u0105\u0107 \"$app$\"?",
+      "placeholders": {
+         "app": {
+            "content": "$1"
+         }
+      }
+   },
+   "remove_from_chrome": {
+      "message": "Usu\u0144 z Chrome"
+   },
+   "restore_all": {
+      "message": "Przywr\u00F3\u0107 wszystkie"
+   },
+   "search": {
+      "message": "Szukanie"
+   },
+   "thumbnail_removed": {
+      "message": "Usuni\u0119to miniatur\u0119."
+   },
+   "undo": {
+      "message": "Cofnij"
+   },
+   "web": {
+      "message": "Sie\u0107"
+   }
+}

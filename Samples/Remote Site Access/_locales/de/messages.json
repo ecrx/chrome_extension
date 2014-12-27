@@ -1,0 +1,64 @@
+{
+   "apps": {
+      "message": "Apps"
+   },
+   "dont_show_on_this_page": {
+      "message": "Nicht auf dieser Seite anzeigen"
+   },
+   "favorites": {
+      "message": "Favorites"
+   },
+   "most_visited": {
+      "message": "Meistbesucht"
+   },
+   "newtab": {
+      "message": "Neuer Tab"
+   },
+   "open_as_full_screen": {
+      "message": "In Vollbildmodus \u00F6ffnen"
+   },
+   "open_as_pinned_tab": {
+      "message": "In angeheftetem Tab \u00F6ffnen"
+   },
+   "open_as_regular_tab": {
+      "message": "In normalem Tab \u00F6ffnen"
+   },
+   "open_as_window": {
+      "message": "In neuem Fenster \u00F6ffnen"
+   },
+   "opened_tabs": {
+      "message": "Opened tabs"
+   },
+   "options": {
+      "message": "Optionen"
+   },
+   "recently_closed": {
+      "message": "K\u00FCrzlich geschlossen"
+   },
+   "remove_app": {
+      "message": "\"$app$\" entfernen?",
+      "placeholders": {
+         "app": {
+            "content": "$1"
+         }
+      }
+   },
+   "remove_from_chrome": {
+      "message": "Aus Chrome entfernen"
+   },
+   "restore_all": {
+      "message": "Alle wiederherstellen"
+   },
+   "search": {
+      "message": "Suche"
+   },
+   "thumbnail_removed": {
+      "message": "Miniaturansicht wurde entfernt."
+   },
+   "undo": {
+      "message": "R\u00FCckg\u00E4ngig"
+   },
+   "web": {
+      "message": "Web"
+   }
+}

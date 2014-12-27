@@ -1,0 +1,67 @@
+{
+   "apps": {
+      "message": "Apps"
+   },
+   "dont_show_on_this_page": {
+      "message": "Bu sayfada g\u00F6sterme"
+   },
+   "favorites": {
+      "message": "Favorites"
+   },
+   "most_visited": {
+      "message": "En \u00E7ok ziyaret edilenler"
+   },
+   "mv_page_li_width": {
+      "message": "130px"
+   },
+   "newtab": {
+      "message": "Yeni Sekme"
+   },
+   "open_as_full_screen": {
+      "message": "Tam ekran\u0131 a\u00E7"
+   },
+   "open_as_pinned_tab": {
+      "message": "\u0130\u011Fnelenmi\u015F sekme olarak a\u00E7"
+   },
+   "open_as_regular_tab": {
+      "message": "Normal sekme olarak a\u00E7"
+   },
+   "open_as_window": {
+      "message": "Pencere olarak a\u00E7"
+   },
+   "opened_tabs": {
+      "message": "Opened tabs"
+   },
+   "options": {
+      "message": "Se\u00E7enekler"
+   },
+   "recently_closed": {
+      "message": "Yeni kapat\u0131lan"
+   },
+   "remove_app": {
+      "message": "\"$app$\" kald\u0131r\u0131lsin mi?",
+      "placeholders": {
+         "app": {
+            "content": "$1"
+         }
+      }
+   },
+   "remove_from_chrome": {
+      "message": "Chrome'dan kald\u0131r"
+   },
+   "restore_all": {
+      "message": "T\u00FCm\u00FCn\u00FC geri y\u00FCkle"
+   },
+   "search": {
+      "message": "Arama"
+   },
+   "thumbnail_removed": {
+      "message": "K\u00FC\u00E7\u00FCk resim kald\u0131r\u0131ld\u0131."
+   },
+   "undo": {
+      "message": "Geri Al"
+   },
+   "web": {
+      "message": "Web"
+   }
+}

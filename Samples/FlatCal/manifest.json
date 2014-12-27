@@ -1,0 +1,38 @@
+{
+   "author": "Christian Juth",
+   "background": {
+      "page": "background/background.html"
+   },
+   "browser_action": {
+      "default_icon": "resources/icons/icon.png",
+      "default_popup": "index.html"
+   },
+   "commands": {
+      "_execute_browser_action": {
+         "suggested_key": {
+            "chromeos": "Alt+C",
+            "default": "Alt+C",
+            "linux": "Alt+C",
+            "mac": "Alt+C",
+            "windows": "Alt+C"
+         }
+      }
+   },
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "A themeable calculator for your Browser",
+   "homepage_url": "http://calculatorextension.com",
+   "icons": {
+      "128": "resources/icons/icon.png",
+      "16": "resources/icons/icon.png",
+      "48": "resources/icons/icon2.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxBKG5CoJ37gn3owINyM7OWfL7nUHf02V/+q9An/bpwzA6vkl98TF8YAd9pnXN69X0yXhtdEPNxXXtWm9qWKfaDysHeu5Ybn+ogMu4sFR0cI+WnDLsPvN3e+ydDLlf6zU2a/tY4rkT4DNPhNlwEoU0fvByYoYEwjFRUUOvn1uv4iPs7mZf261Beyi7hI79tfxnXQ9bIA43PnPAm5Sc8cCbGsGmzDOMY5bMtq4KQMVKkWr+mF+5qF4gVFoaRSVMrqwIqCXHZn/Ou9vFY5hzOpVBbq8Mfzm/LnaXGTjRs1NSrDQjDBo6nKkPi3aVhWBjsxr8eF026X1PhQc3QlbvVtHZwIDAQAB",
+   "manifest_version": 2,
+   "name": "FlatCal",
+   "offline_enabled": true,
+   "options_page": "settings/options/options.html",
+   "permissions": [ "clipboardWrite", "clipboardRead", "notifications", "http://calculatorextension.com/*", "https://raw.githubusercontent.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.2",
+   "web_accessible_resources": ["index.html", "resources/icons/icon.png"]
+}

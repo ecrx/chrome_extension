@@ -1,0 +1,28 @@
+{
+	"SettingsMenu":[
+			{"Name": "System Information", "Link": "cgi-bin/webif/info.sh?cat=Info"},	
+			{"Name": "USB Devices", "Link": "cgi-bin/webif/status-usb.sh"},	
+			{"Name": "Network Interfaces", "Link": "cgi-bin/webif/status-interfaces.sh"},	
+			{"Name": "Network Configuration", "Link": "cgi-bin/webif/network.sh"},	
+			{"Name": "Processes", "Link": "cgi-bin/webif/status-processes.sh"},
+			{"Name": "Diagnostics", "Link": "cgi-bin/webif/status-diag.sh"}
+	],
+	"InstalledApp": [
+			{"Name": "Virtual Pos", "Link": "chrome-extension://jdjnfmjdmaibffegfobdbchkpdeeccna/index.html", "Icon":"appicons/icon_ipos_128.png"},	
+			{"Name": "Rent Car", "Link": "http://www.hertz.com", "Icon":"appicons/icon_rentcar_128.png"},	
+			{"Name": "Restaurant App", "Link": "chrome-extension://naombceomffodoafdkdealonlaajgbhe/index.html", "Icon":"appicons/icon_ipos_128.png"},	
+			{"Name": "App4", "Link": "javascript:void(0);", "Icon":"http://placehold.it/180x180"},
+			{"Name": "App5", "Link": "javascript:void(0);", "Icon":"http://placehold.it/180x180"},	
+			{"Name": "App6", "Link": "javascript:void(0);", "Icon":"http://placehold.it/180x180"},	
+			{"Name": "App7", "Link": "javascript:void(0);", "Icon":"http://placehold.it/180x180"}
+	],
+	"MarketApp": [
+			{"Name": "App1", "Link": "javascript:void(0);", "Icon":"http://placehold.it/180x180"},	
+			{"Name": "App2", "Link": "javascript:void(0);", "Icon":"http://placehold.it/180x180"},	
+			{"Name": "App3", "Link": "javascript:void(0);", "Icon":"http://placehold.it/180x180"},
+			{"Name": "App2", "Link": "javascript:void(0);", "Icon":"http://placehold.it/180x180"},	
+			{"Name": "App3", "Link": "javascript:void(0);", "Icon":"http://placehold.it/180x180"},	
+			{"Name": "App4", "Link": "javascript:void(0);", "Icon":"http://placehold.it/180x180"}
+	],
+	"MarqueeText": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
+}

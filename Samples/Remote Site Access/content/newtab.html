@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+<title>ARÇELİK ECR Launcher</title>
+
+<!-- Bootstrap core CSS -->
+<link href="/skin/newtab/css/bootstrap.css" rel="stylesheet">
+<link href="/skin/newtab/css/ardic.css" rel="stylesheet">
+<link href="/skin/newtab/css/default.css" rel="stylesheet">
+<!-- Just for debugging purposes. Don't actually copy this line! -->
+<!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="loader" class="modal fade">
+	<div class="spinner"><img src="../skin/newtab/images/loader.gif" alt="" width="50" height="50"> <br> Loading</div>
+</div>
+<div id="setup">
+  <div class="setupheader col-xs-12">
+  
+  </div>
+  <div class="setupcontent col-xs-12">
+  	<div class="part0 text-center">
+    	<h1>Welcome </h1>
+        <div class="notification col-xs-12 text-center ">
+        	<p class="alert hide">Problem occurs device connection! Please contact with IT Administrator.</p>
+            <p class="success hide">Service IP successfully changed and connected. </p>
+        </div>
+        <div class="text-center col-xs-12">
+        	<div id="setServicesURL" class="hide"> 
+            	<input type="text" id="inp_serviceip">
+                <button id="btn_setserviceip" class="btn btn-default btn-sm">Set</button>
+            </div>
+        </div>
+        <div class="setupFooter col-xs-12"> 
+          <button id="btn_setups_start" class="text-center btn"> Start Configuration </button>
+          <button id="btn_calibration" class="text-center btn"> Screen Calibration </button>
+        </div>
+    </div>
+    <div class="part1 col-xs-12" style="display:none;">
+      <h2>Network Settings</h2>
+      <div id="setupNetwork" class="col-xs-12">
+      
+      </div>
+      <div class="setupFooter col-xs-12"> 
+          <button id="btn_setup_prev_0" class="pull-left btn"> Go Back </button>
+          <button id="btn_setup_next_2" class="pull-right btn"> Next </button>
+      </div>
+    </div>
+    <div class="part2 col-xs-12" style="display:none;">
+      <h2>USB Settings</h2>
+      <div id="setupUSB" class="col-xs-12">
+      
+      </div>
+      <div class="setupFooter col-xs-12"> 
+          <button id="btn_setup_prev_1" class="pull-left btn"> Go Back </button>
+          <button id="btn_setup_next_3" class="pull-right btn"> Next </button>
+      </div>
+    </div>
+    <div class="part3 col-xs-12" style="display:none;">
+    	<h2>Theme Settings</h2>
+      <div class="col-xs-12">
+      	<ul id="ThemeMenu">
+          <li class="big"><span tabindex="0"><span class="block big blockwhite"></span></span></li>
+          <li class="big"><span tabindex="1"><span class="block big blockdark"></span></span></li>
+          <li class="big"><span tabindex="2"><span class="block big blockblue"></span></span></li>
+          <li class="big"><span tabindex="3"><span class="block big blockred"></span></span></li>
+          <li class="big"><span tabindex="4"><span class="block big blockorange"></span></span></li>
+        </ul>
+      </div>
+      <div class="setupFooter col-xs-12"> 
+          <button id="btn_setup_prev_2" class="pull-left btn"> Go Back </button>
+          <button id="btn_setup_next_4" class="pull-right btn"> Next </button>
+      </div>
+    </div>
+    <div class="part4 text-center col-xs-12" style="display:none;">
+    	<h2>Congratulations</h2>
+        <p>Device setup finished</p>
+        <div class="setupFooter col-xs-12"> 
+          <button id="btn_setups_close" class="btn"> Complete Configuration </button>
+        </div>
+    </div>
+  </div>
+<!--
+  <div class="setupfooter col-xs-12">
+  	
+  </div>
+-->
+</div>
+<div id="wrap">
+  <div class="navbar navbar-inverse navbar-fixed-top topFirst" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <!--<a id="Clock" class="navbar-brand" href="#">Project name</a> --></div>
+      <div class="navbar-collapse collapse col-sm-4 pull-left">
+        <ul id="MenuTabs" class="nav navbar-nav">
+          <li class="active"><a href="#apps" id="TabHome" data-toggle="tab"><span class="glyphicons home"></span> Home</a></li>
+          <li><a href="#favs" id="TabMarket" data-toggle="tab"><span class="glyphicons show_thumbnails"></span> Market Apps</a></li>
+          <li><a href="#ExternalContent" id="Settings" data-toggle="tab" style="display:none;"><span class="glyphicons cogwheels"></span> Settings</a></li>
+        </ul>
+      </div>
+      <div class="navbar-collapse collapse col-sm-6 pull-right">
+        <ul class="nav navbar-nav NavIcons">
+          <li class="text-center"> <a id="btn_wireless" href="#"><span class="glyphicons wifi active"></span></a> </li>
+          <li class="text-center"> <a id="btn_bluetooth" href="#" ><span class="glyphicons bluetooth passive"></span> </a> </li>
+          <li class="text-center"> <a id="btn_usb" href="#" ><span class="glyphicons cloud passive"></span> </a> </li>
+          <li class="text-center"> <a href="#" id="btn_settings" ><span class="glyphicons cogwheel active"></span></a></li>
+        </ul>
+      </div>
+      <!--/.navbar-collapse --> 
+    </div>
+  </div>
+  <div id="SettingsPanel">
+    <ul id="SettingsMenu">
+      <li> <span class="header">Settings</span>
+        <ul id="ConfigMenu">
+        </ul>
+      </li>
+      <li> <span class="header">Theme</span>
+       
+            <ul id="ThemeMenu">
+              <li><span tabindex="0"><span class="block blockwhite"></span></span></li>
+              <li><span tabindex="1"><span class="block blockdark"></span></span></li>
+              <li><span tabindex="2"><span class="block blockblue"></span></span></li>
+              <li><span tabindex="3"><span class="block blockred"></span></span></li>
+              <li><span tabindex="4"><span class="block blockorange"></span></span></li>
+            </ul>
+      </li>
+      <li> <span class="header">Info</span> 
+      		<ul id="Info">
+           	<li><strong>Version:</strong> <span id="version"> </span> </li> 
+            <li><strong>Service IP:</strong> <span id="serviceip"> </span> <a href="javascript:void(0);" id="edt_serviceip" class="hide">Edit</a> <div id="setServicesURL" class="hide"> <input type="text" id="inp_serviceip"><button id="btn_setserviceip" class="btn btn-default btn-sm">Set</button></div> </li> 
+           </ul>
+           <ul id="OtherInfo"></ul>
+      </li>
+    </ul>
+  </div>
+  
+  <div id="Content" class="container"> 
+    <!-- Example row of columns -->
+    <div class="tab-content">
+      <div id="ExternalContent" class="tab-pane">
+      	
+      </div>
+      <div class="tab-pane active" id="apps">
+        <div class="row">
+          <div class="col-sm-12">
+            <div id="InstalltedAppsCarousel" class="carousel slide">
+              <ol id="InstalltedAppsIndicators" class="carousel-indicators">
+              </ol>
+              
+              <!-- Carousel items -->
+              <div id="InstalltedAppsInner" class="carousel-inner"> </div>
+              <!--/carousel-inner--> 
+              
+              <a class="left carousel-control" id="InstalledAppsNavLeft" href="#InstalltedAppsCarousel" data-slide="prev">‹</a> <a class="right carousel-control" id="InstalledAppsNavRight" href="#InstalltedAppsCarousel" data-slide="next">›</a> </div>
+            <!--/InstalltedAppsCarousel--> 
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane" id="favs">
+        <div class="row">
+          <div class="col-sm-12">
+            <div id="MarketAppsCarousel" class="carousel slide">
+              <ol id="MarketAppsIndicators" class="carousel-indicators">
+              </ol>
+              
+              <!-- Carousel items -->
+              <div id="MarketAppsInner" class="carousel-inner"> </div>
+              <!--/carousel-inner--> 
+              
+              <a class="left carousel-control" id="MarketAppsNavLeft" href="#MarketAppsCarousel" data-slide="prev">‹</a> <a class="right carousel-control" id="MarketAppsNavRight" href="#MarketAppsCarousel" data-slide="next">›</a> </div>
+            <!--/MarketAppsCarousel--> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:block; height:20px; min-height:20px;"></div>
+  </div>
+</div>
+<div id="footer" class="fixed-bottom topFirst" >
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="marquee">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /container --> 
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster 
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script> --> 
+<script src="external/jquery.js"></script> 
+<script src="external/bootstrap.min.js"></script> 
+<script src="external/jquery.marquee.min.js"></script> 
+<script src="external/jquery.cookie.min.js"></script> 
+<script src="external/bootstrap-growl.min.js"></script> 
+<script src="external/ardic.ecr.v2.js"></script>
+<script src="external/webif.js"></script>
+</body>
+</html>

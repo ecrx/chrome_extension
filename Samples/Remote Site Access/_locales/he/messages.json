@@ -1,0 +1,335 @@
+{
+   "bookmarks": {
+      "message": "\u05E1\u05D9\u05DE\u05E0\u05D9\u05D5\u05EA"
+   },
+   "cleanhistory": {
+      "message": "\u05E0\u05E7\u05D4 \u05D4\u05D9\u05E1\u05D8\u05D5\u05E8\u05D9\u05D4"
+   },
+   "dont_show_on_this_page": {
+      "message": "N\u00E3o mostrar esta p\u00E1gina"
+   },
+   "downloads": {
+      "message": "\u05D4\u05D5\u05E8\u05D3\u05D5\u05EA"
+   },
+   "extensions": {
+      "message": "\u05EA\u05D5\u05E1\u05E4\u05D9\u05DD"
+   },
+   "favadd_add": {
+      "message": "\u05D4\u05D5\u05E1\u05E3"
+   },
+   "favadd_continue": {
+      "message": "\u05D4\u05DE\u05E9\u05DA"
+   },
+   "favadd_customurl": {
+      "message": "\u05D4\u05D6\u05DF \u05E9\u05DD \u05D0\u05D5 \u05DB\u05EA\u05D5\u05D1\u05EA \u05D0\u05EA\u05E8"
+   },
+   "favadd_gallery": {
+      "message": "\u05D2\u05DC\u05E8\u05D9\u05D4"
+   },
+   "favadd_go": {
+      "message": "\u05D1\u05E6\u05E2"
+   },
+   "favadd_save": {
+      "message": "\u05E9\u05DE\u05D5\u05E8"
+   },
+   "favadd_title": {
+      "message": "\u05D4\u05D5\u05E1\u05E3 \u05D0\u05EA\u05E8"
+   },
+   "favadd_tooltip": {
+      "message": "\u05D4\u05E7\u05DC\u05E7 \u05E2\u05DC \u05DC\u05D7\u05E6\u05DF \u05D4 + \u05E2\u05DC \u05DE\u05E0\u05EA \u05DC\u05D4\u05D5\u05E1\u05D9\u05E3 \u05D0\u05EA\u05E8\u05D9\u05DD \u05DC\u05D3\u05E3 \u05D6\u05D4"
+   },
+   "favadd_tooltip_imagefile": {
+      "message": "\u05D4\u05D2\u05D3\u05E8 \u05EA\u05DE\u05D5\u05E0\u05D4 \u05DE\u05E7\u05D5\u05D1\u05E5"
+   },
+   "favadd_tooltip_screenshot": {
+      "message": "\u05E7\u05D7 \u05E6\u05D9\u05DC\u05D5\u05DD \u05DE\u05E1\u05DA"
+   },
+   "favadd_url": {
+      "message": "URL"
+   },
+   "favgrp_addgroup": {
+      "message": "\u05D4\u05D5\u05E1\u05E3"
+   },
+   "favgrp_create": {
+      "message": "\u05D0\u05E9\u05E8"
+   },
+   "favgrp_delconfirm": {
+      "message": "\u05D4\u05D0\u05DD \u05D0\u05EA\u05D4 \u05D1\u05D8\u05D5\u05D7 \u05E9\u05D0\u05EA\u05D4 \u05E8\u05D5\u05E6\u05D4 \u05DC\u05DE\u05D7\u05D5\u05E7 \u05E7\u05D1\u05D5\u05E6\u05D4 \u05D6\u05D0\u05EA? \u05DB\u05DC \u05D4\u05D0\u05EA\u05E8\u05D9\u05DD \u05D4\u05DE\u05D5\u05D2\u05D3\u05E8\u05D9\u05DD \u05D1\u05E7\u05D1\u05D5\u05E6\u05D4 \u05D9\u05D9\u05DE\u05D7\u05E7\u05D5"
+   },
+   "favgrp_editgroup": {
+      "message": "\u05E2\u05E8\u05D5\u05DA \u05E7\u05D1\u05D5\u05E6\u05D4"
+   },
+   "favgrp_groupname": {
+      "message": "\u05E9\u05DD \u05D4\u05E7\u05D1\u05D5\u05E6\u05D4"
+   },
+   "favgrp_pickcolor": {
+      "message": "\u05D1\u05D7\u05E8 \u05E6\u05D1\u05E2"
+   },
+   "favgrp_savegroup": {
+      "message": "\u05E9\u05DE\u05D5\u05E8"
+   },
+   "favorites": {
+      "message": "\u05DE\u05D5\u05E2\u05D3\u05E4\u05D9\u05DD"
+   },
+   "gallery_add": {
+      "message": "\u05D4\u05D5\u05E1\u05E3"
+   },
+   "gallery_cat_0195d37c": {
+      "message": "\u05E4\u05D9\u05E0\u05E0\u05E1\u05D9"
+   },
+   "gallery_cat_0233966f": {
+      "message": "\u05E7\u05E0\u05D9\u05D5\u05EA"
+   },
+   "gallery_cat_29ffd710": {
+      "message": "\u05E9\u05D9\u05E8\u05D5\u05EA\u05D9\u05DD"
+   },
+   "gallery_cat_2c52cbb0": {
+      "message": "\u05DE\u05D9\u05D3\u05E2"
+   },
+   "gallery_cat_331338ac": {
+      "message": "\u05E8\u05E9\u05EA\u05D5\u05EA \u05D7\u05D1\u05E8\u05EA\u05D9\u05D5\u05EA \u05D5\u05EA\u05E7\u05E9\u05D5\u05E8\u05EA"
+   },
+   "gallery_cat_7f091c3b": {
+      "message": "\u05DE\u05E7\u05D5\u05DE\u05D9 \u05D5\u05EA\u05D9\u05D9\u05E8\u05D5\u05EA"
+   },
+   "gallery_cat_9d7dd9d7": {
+      "message": "\u05DE\u05D7\u05E9\u05D1\u05D9\u05DD \u05D5\u05D4\u05D9\u05D9\u05D8\u05E7"
+   },
+   "gallery_cat_c04ecbb5": {
+      "message": "\u05D1\u05D9\u05D3\u05D5\u05E8 \u05D5\u05DE\u05D3\u05D9\u05D4"
+   },
+   "gallery_cat_cf220d68": {
+      "message": "\u05D7\u05D3\u05E9\u05D5\u05EA \u05D5\u05DE\u05D2\u05D6\u05D9\u05E0\u05D9\u05DD"
+   },
+   "gallery_title": {
+      "message": "\u05D1\u05D7\u05E8 \u05D0\u05EA\u05E8\u05D9\u05DD"
+   },
+   "history": {
+      "message": "\u05D4\u05D9\u05E1\u05D8\u05D5\u05E8\u05D9\u05D4"
+   },
+   "info_about": {
+      "message": "\u05D0\u05D5\u05D3\u05D5\u05EA"
+   },
+   "info_contactus": {
+      "message": "\u05E6\u05D5\u05E8 \u05E7\u05E9\u05E8"
+   },
+   "info_eula": {
+      "message": "\u05E8\u05D9\u05E9\u05D9\u05D5\u05DF \u05E9\u05D9\u05DE\u05D5\u05E9"
+   },
+   "info_privacy": {
+      "message": "\u05DE\u05D3\u05D9\u05E0\u05D9\u05D5\u05EA \u05E4\u05E8\u05D8\u05D9\u05D5\u05EA"
+   },
+   "info_rateus": {
+      "message": "\u05D3\u05E8\u05D2 \u05D0\u05D5\u05EA\u05E0\u05D5"
+   },
+   "info_uninstall": {
+      "message": "\u05D4\u05E1\u05E8 \u05D0\u05D5\u05EA\u05D9"
+   },
+   "layout_dialsmaxsize": {
+      "message": "\u05D2\u05D5\u05D3\u05DC \u05DE\u05E7\u05E1\u05D9\u05DE\u05DC\u05D9"
+   },
+   "layout_dialsmaxsize_large": {
+      "message": "\u05D2\u05D3\u05D5\u05DC"
+   },
+   "layout_dialsmaxsize_medium": {
+      "message": "\u05D1\u05D9\u05D5\u05E0\u05E0\u05D9"
+   },
+   "layout_dialsmaxsize_small": {
+      "message": "\u05E7\u05D8\u05DF"
+   },
+   "layout_dialsshape": {
+      "message": "\u05E6\u05D5\u05E8\u05D4"
+   },
+   "layout_dialsshape_box": {
+      "message": "\u05E8\u05D7\u05D1"
+   },
+   "layout_dialsshape_flat": {
+      "message": "\u05E6\u05E8"
+   },
+   "layout_maxcolumns": {
+      "message": "\u05DE\u05E1\u05E4\u05E8 \u05DE\u05E7\u05E1\u05D9\u05DE\u05DC\u05D9 \u05E9\u05DC \u05D8\u05D5\u05E8\u05D9\u05DD"
+   },
+   "layout_showtitles": {
+      "message": "\u05DB\u05D5\u05EA\u05E8\u05D5\u05EA"
+   },
+   "layout_spacing": {
+      "message": "\u05DE\u05E8\u05D5\u05D5\u05D7"
+   },
+   "layout_spacing_big": {
+      "message": "\u05D2\u05D3\u05D5\u05DC"
+   },
+   "layout_spacing_medium": {
+      "message": "\u05D1\u05D9\u05E0\u05D5\u05E0\u05D9"
+   },
+   "layout_spacing_none": {
+      "message": "\u05DC\u05DC\u05D0"
+   },
+   "layout_spacing_small": {
+      "message": "\u05E7\u05D8\u05DF"
+   },
+   "layout_title": {
+      "message": "\u05E2\u05D9\u05E6\u05D5\u05D1"
+   },
+   "mostvisited": {
+      "message": "\u05D4\u05DB\u05D9 \u05E4\u05D5\u05E4\u05D5\u05DC\u05D0\u05E8\u05D9\u05DD"
+   },
+   "newtab": {
+      "message": "\u05DB\u05E8\u05D8\u05D9\u05E1\u05D9\u05D4 \u05D7\u05D3\u05E9\u05D4"
+   },
+   "open_as_full_screen": {
+      "message": "\u05E4\u05EA\u05D7 \u05D1\u05DE\u05E1\u05DA \u05DE\u05DC\u05D0"
+   },
+   "open_as_pinned_tab": {
+      "message": "\u05E4\u05EA\u05D7 \u05D1\u05D3\u05E3 \u05DE\u05D5\u05E6\u05DE\u05D3"
+   },
+   "open_as_regular_tab": {
+      "message": "\u05E4\u05EA\u05D7 \u05D1\u05DC\u05E9\u05D5\u05E0\u05D9\u05EA \u05E8\u05D2\u05D9\u05DC\u05D4"
+   },
+   "open_as_window": {
+      "message": "\u05E4\u05EA\u05D7 \u05D1\u05D7\u05DC\u05D5\u05DF \u05D7\u05D3\u05E9"
+   },
+   "options": {
+      "message": "\u05D4\u05D2\u05D3\u05E8\u05D5\u05EA"
+   },
+   "plugin_activetabs": {
+      "message": "\u05D3\u05E4\u05D9\u05DD \u05E4\u05EA\u05D5\u05D7\u05D9\u05DD"
+   },
+   "plugin_addgroup": {
+      "message": "\u05D4\u05D5\u05E1\u05E3 \u05E7\u05D1\u05D5\u05E6\u05D4"
+   },
+   "plugin_chrome": {
+      "message": "\u05DB\u05E8\u05D5\u05DD"
+   },
+   "plugin_delgroup": {
+      "message": "\u05D4\u05E1\u05E8 \u05E7\u05D1\u05D5\u05E6\u05D4"
+   },
+   "plugin_editgroup": {
+      "message": "\u05E2\u05E8\u05D5\u05DA \u05E7\u05D1\u05D5\u05E6\u05D4"
+   },
+   "plugin_readitlater": {
+      "message": "\u05E8\u05E9\u05D9\u05DE\u05EA \u05E7\u05E8\u05D9\u05D0\u05D4"
+   },
+   "plugin_recentlyclosed": {
+      "message": "\u05E0\u05E1\u05D2\u05E8\u05D5 \u05DC\u05D0\u05D7\u05E8\u05D5\u05E0\u05D4"
+   },
+   "plugin_webapps": {
+      "message": "\u05D9\u05D9\u05E9\u05D5\u05DE\u05D9\u05DD"
+   },
+   "ps_action": {
+      "message": "\u05E4\u05D5\u05E7\u05E1\u05D0\u05D1, \u05E2\u05DB\u05E9\u05D9\u05D5 \u05D2\u05DD \u05DC\u05D0\u05E0\u05D3\u05E8\u05D5\u05D9\u05D3"
+   },
+   "ps_login_h": {
+      "message": "\u05DB\u05E0\u05E1 \u05DC\u05D7\u05E9\u05D1\u05D5\u05DF \u05D2\u05D5\u05D2\u05DC"
+   },
+   "ps_login_l1": {
+      "message": "\u05DB\u05E0\u05E1 \u05DC\u05D7\u05E9\u05D1\u05D5\u05DF \u05D2\u05D5\u05D2\u05DC \u05E2\u05DC \u05DE\u05E0\u05EA \u05DC\u05E7\u05D1\u05DC \u05D0\u05EA \u05D0\u05E4\u05DC\u05D9\u05E7\u05E6\u05D9\u05D9\u05EA Foxtab \u05DC\u05DE\u05DB\u05E9\u05D9\u05E8\u05DA \u05DB\u05E2\u05EA"
+   },
+   "ps_promo_close": {
+      "message": "\u05E1\u05D2\u05D5\u05E8"
+   },
+   "ps_promo_download": {
+      "message": "\u05D4\u05D5\u05E8\u05D3 \u05D0\u05EA \u05D0\u05E4\u05DC\u05D9\u05E7\u05E6\u05D9\u05D9\u05EA Foxtab"
+   },
+   "ps_promo_h": {
+      "message": "\u05D7\u05D3\u05E9! Foxtab \u05DC\u05D4\u05D5\u05E8\u05D3\u05D4 \u05D1\u05D0\u05E0\u05D3\u05E8\u05D5\u05D9\u05D3"
+   },
+   "ps_promo_no": {
+      "message": "\u05DC\u05D0"
+   },
+   "ps_promo_p1": {
+      "message": "\u05D4\u05DB\u05D9\u05E8\u05D5 \u05D0\u05EA \u05D4\u05D7\u05D1\u05E8 \u05D4\u05D7\u05D3\u05E9 \u05D1\u05DE\u05E9\u05E4\u05D7\u05EA \u05D4\u05DE\u05D5\u05E6\u05E8\u05D9\u05DD \u05E9\u05DC Foxtab! \u05D0\u05E4\u05DC\u05D9\u05E7\u05E6\u05D9\u05D9\u05EA Foxtab \u05D6\u05DE\u05D9\u05E0\u05D4 \u05DC\u05D4\u05D5\u05E8\u05D3\u05D4 \u05DC\u05DE\u05DB\u05E9\u05D9\u05E8 \u05D4\u05D0\u05E0\u05D3\u05E8\u05D5\u05D9\u05D3!"
+   },
+   "ps_promo_p2": {
+      "message": "\u05D2\u05DC\u05D5\u05E9 \u05D1\u05D8\u05D0\u05D1\u05D9\u05DD \u05E9\u05DC\u05DA \u05D1\u05DB\u05DC \u05DE\u05E7\u05D5\u05DD."
+   },
+   "ps_promo_q": {
+      "message": "\u05D4\u05D0\u05DD \u05D0\u05EA\u05D4 \u05DE\u05E2\u05D5\u05E0\u05D9\u05D9\u05DF \u05DC\u05D4\u05EA\u05E7\u05D9\u05DF \u05D0\u05EA Foxtab \u05D1\u05DE\u05DB\u05E9\u05D9\u05E8 \u05D4\u05D0\u05E0\u05D3\u05E8\u05D5\u05D9\u05D3 \u05E9\u05DC\u05DA?"
+   },
+   "ps_promo_retry": {
+      "message": "\u05E0\u05E1\u05D4 \u05E9\u05D5\u05D1"
+   },
+   "ps_promo_sorry": {
+      "message": "\u05DE\u05E6\u05D8\u05E2\u05E8\u05D9\u05DD..."
+   },
+   "ps_promo_sorry_p1": {
+      "message": "\u05D0\u05E4\u05DC\u05D9\u05E7\u05E6\u05D9\u05D9\u05EA Foxtab \u05D6\u05DE\u05D9\u05E0\u05D4 \u05DB\u05E8\u05D2\u05E2 \u05DC\u05DE\u05DB\u05E9\u05D9\u05E8\u05D9 \u05D0\u05E0\u05D3\u05E8\u05D5\u05D9\u05D3 \u05D1\u05DC\u05D1\u05D3"
+   },
+   "ps_promo_yes": {
+      "message": "\u05DB\u05DF!"
+   },
+   "ps_success_great": {
+      "message": "\u05DE\u05E2\u05D5\u05DC\u05D4!"
+   },
+   "ps_success_h": {
+      "message": "\u05D4\u05D5\u05EA\u05E7\u05DF \u05D1\u05D4\u05E6\u05DC\u05D7\u05D4!"
+   },
+   "ps_success_msg": {
+      "message": "\u05D4\u05D0\u05E4\u05DC\u05D9\u05E7\u05E6\u05D9\u05D4 \u05D4\u05D5\u05EA\u05E7\u05E0\u05D4 \u05D1\u05D4\u05E6\u05DC\u05D7\u05D4. \u05EA\u05D5\u05D3\u05D4 \u05E2\u05DC \u05D1\u05D7\u05D9\u05E8\u05EA\u05DA"
+   },
+   "ps_sucesss_p1": {
+      "message": "Foxtab \u05D4\u05D5\u05EA\u05E7\u05DF \u05D1\u05D4\u05E6\u05DC\u05D7\u05D4 \u05D1\u05DE\u05DB\u05E9\u05D9\u05E8\u05DA. \u05D1\u05D3\u05D5\u05E7 \u05D1\u05EA\u05E4\u05E8\u05D9\u05D8 \u05D4\u05D0\u05E4\u05DC\u05D9\u05E7\u05E6\u05D9\u05D5\u05EA, \u05D5\u05EA\u05D4\u05E0\u05D4 \u05DE\u05D4\u05D8\u05D0\u05D1\u05D9\u05DD \u05E9\u05DC\u05DA \u05D1\u05DB\u05DC \u05DE\u05E7\u05D5\u05DD!"
+   },
+   "ps_toast_download": {
+      "message": "\u05D4\u05EA\u05E7\u05DF \u05E2\u05DB\u05E9\u05D9\u05D5"
+   },
+   "ps_toast_p1": {
+      "message": "\u05D2\u05DC\u05D5\u05E9 \u05D1\u05D8\u05D0\u05D1\u05D9\u05DD \u05E9\u05DC\u05DA \u05D1\u05DB\u05DC \u05DE\u05E7\u05D5\u05DD."
+   },
+   "ps_toast_p2": {
+      "message": "\u05E0\u05E1\u05D4 \u05E2\u05DB\u05E9\u05D9\u05D5 \u05D0\u05EA \u05D4Foxtab \u05D4\u05D7\u05D3\u05E9 \u05D1\u05D2\u05E8\u05E1\u05EA \u05D4\u05D0\u05E0\u05D3\u05E8\u05D5\u05D9\u05D3, \u05D4\u05D4\u05D5\u05E8\u05D3\u05D4 \u05D7\u05D9\u05E0\u05DD!"
+   },
+   "readlist_all": {
+      "message": "\u05D4\u05DB\u05DC"
+   },
+   "readlist_flagged": {
+      "message": "\u05DE\u05E1\u05D5\u05DE\u05E0\u05D9\u05DD"
+   },
+   "readlist_last7days": {
+      "message": "7 \u05D9\u05DE\u05D9\u05DD \u05D0\u05D7\u05E8\u05D5\u05E0\u05D9\u05DD"
+   },
+   "readlist_older": {
+      "message": "\u05DE\u05D6\u05DE\u05DF"
+   },
+   "readlist_thismonth": {
+      "message": "\u05D4\u05D7\u05D5\u05D3\u05E9"
+   },
+   "readlist_today": {
+      "message": "\u05D4\u05D9\u05D5\u05DD"
+   },
+   "readlist_yesterday": {
+      "message": "\u05D0\u05EA\u05DE\u05D5\u05DC"
+   },
+   "remove_from_chrome": {
+      "message": "\u05D4\u05E1\u05E8 \u05DE\u05D4\u05D3\u05E4\u05D3\u05E4\u05DF"
+   },
+   "restore_all": {
+      "message": "\u05E9\u05D7\u05D6\u05E8 \u05D4\u05DB\u05DC"
+   },
+   "search": {
+      "message": "\u05D7\u05E4\u05E9"
+   },
+   "settings": {
+      "message": "\u05D4\u05D2\u05D3\u05E8\u05D5\u05EA"
+   },
+   "theme_background": {
+      "message": "\u05E8\u05E7\u05E2"
+   },
+   "theme_custombg": {
+      "message": "\u05EA\u05DE\u05D5\u05E0\u05EA \u05E8\u05E7\u05E2 \u05DE\u05E7\u05D5\u05D1\u05E5"
+   },
+   "theme_illumination": {
+      "message": "\u05EA\u05D0\u05D5\u05E8\u05D4"
+   },
+   "theme_title": {
+      "message": "\u05E1\u05E7\u05D9\u05DF"
+   },
+   "thumbnail_removed": {
+      "message": "Miniatura removida."
+   },
+   "undo": {
+      "message": "\u05D1\u05D8\u05DC"
+   },
+   "web": {
+      "message": "\u05D0\u05D9\u05E0\u05D8\u05E8\u05E0\u05D8"
+   }
+}
