@@ -32,6 +32,7 @@ The application developers needs to package their applications as a chromium ext
    "web_accessible_resources": [ "index.html", "flappy-bird-logo.jpeg" ]
 }
 ```
+
 7. Add your about info as a proper dialog/link to your application.
 
 
